@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(welcome));
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDine = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnEmp = new System.Windows.Forms.Button();
-            this.btnCash = new System.Windows.Forms.Button();
-            this.btnCashin = new System.Windows.Forms.Button();
+            this.btnLoginIn = new System.Windows.Forms.Button();
+            this.radAdmin = new System.Windows.Forms.RadioButton();
+            this.radManager = new System.Windows.Forms.RadioButton();
+            this.radEmployee = new System.Windows.Forms.RadioButton();
+            this.txtNumInput = new System.Windows.Forms.TextBox();
+            this.btnNum1 = new System.Windows.Forms.Button();
+            this.btnNum2 = new System.Windows.Forms.Button();
+            this.btnNum3 = new System.Windows.Forms.Button();
+            this.btnNum4 = new System.Windows.Forms.Button();
+            this.btnNum5 = new System.Windows.Forms.Button();
+            this.btnNum6 = new System.Windows.Forms.Button();
+            this.btnNum7 = new System.Windows.Forms.Button();
+            this.btnNum8 = new System.Windows.Forms.Button();
+            this.btnNum9 = new System.Windows.Forms.Button();
+            this.btnNumC = new System.Windows.Forms.Button();
+            this.btnNum0 = new System.Windows.Forms.Button();
+            this.btnNumOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,83 +56,216 @@
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(151, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(478, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to IndianTaste";
             // 
-            // btnDine
+            // btnLoginIn
             // 
-            this.btnDine.BackColor = System.Drawing.Color.Olive;
-            this.btnDine.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDine.Location = new System.Drawing.Point(180, 151);
-            this.btnDine.Name = "btnDine";
-            this.btnDine.Size = new System.Drawing.Size(171, 65);
-            this.btnDine.TabIndex = 1;
-            this.btnDine.Text = "DINE IN";
-            this.btnDine.UseVisualStyleBackColor = false;
-            this.btnDine.Click += new System.EventHandler(this.btnDine_Click);
+            this.btnLoginIn.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLoginIn.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLoginIn.Location = new System.Drawing.Point(177, 185);
+            this.btnLoginIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoginIn.Name = "btnLoginIn";
+            this.btnLoginIn.Size = new System.Drawing.Size(137, 53);
+            this.btnLoginIn.TabIndex = 1;
+            this.btnLoginIn.Text = "LOG IN";
+            this.btnLoginIn.UseVisualStyleBackColor = false;
+            this.btnLoginIn.Click += new System.EventHandler(this.btnDine_Click);
             // 
-            // btnAdmin
+            // radAdmin
             // 
-            this.btnAdmin.BackColor = System.Drawing.Color.Olive;
-            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdmin.Location = new System.Drawing.Point(180, 273);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(171, 63);
-            this.btnAdmin.TabIndex = 2;
-            this.btnAdmin.Text = "ADMIN ";
-            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.radAdmin.AutoSize = true;
+            this.radAdmin.BackColor = System.Drawing.Color.Fuchsia;
+            this.radAdmin.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radAdmin.Location = new System.Drawing.Point(421, 151);
+            this.radAdmin.Name = "radAdmin";
+            this.radAdmin.Size = new System.Drawing.Size(116, 35);
+            this.radAdmin.TabIndex = 2;
+            this.radAdmin.TabStop = true;
+            this.radAdmin.Text = "Admin";
+            this.radAdmin.UseVisualStyleBackColor = false;
             // 
-            // btnEmp
+            // radManager
             // 
-            this.btnEmp.BackColor = System.Drawing.Color.Olive;
-            this.btnEmp.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEmp.Location = new System.Drawing.Point(375, 387);
-            this.btnEmp.Name = "btnEmp";
-            this.btnEmp.Size = new System.Drawing.Size(202, 69);
-            this.btnEmp.TabIndex = 3;
-            this.btnEmp.Text = "EMPLOYEE";
-            this.btnEmp.UseVisualStyleBackColor = false;
-            this.btnEmp.Click += new System.EventHandler(this.btnEmp_Click);
+            this.radManager.AutoSize = true;
+            this.radManager.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.radManager.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radManager.Location = new System.Drawing.Point(421, 203);
+            this.radManager.Name = "radManager";
+            this.radManager.Size = new System.Drawing.Size(147, 35);
+            this.radManager.TabIndex = 3;
+            this.radManager.TabStop = true;
+            this.radManager.Text = "Manager";
+            this.radManager.UseVisualStyleBackColor = false;
             // 
-            // btnCash
+            // radEmployee
             // 
-            this.btnCash.BackColor = System.Drawing.Color.Olive;
-            this.btnCash.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCash.Location = new System.Drawing.Point(375, 146);
-            this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(202, 70);
-            this.btnCash.TabIndex = 4;
-            this.btnCash.Text = "CASH OUT";
-            this.btnCash.UseVisualStyleBackColor = false;
-            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
+            this.radEmployee.AutoSize = true;
+            this.radEmployee.BackColor = System.Drawing.Color.SandyBrown;
+            this.radEmployee.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radEmployee.Location = new System.Drawing.Point(421, 265);
+            this.radEmployee.Name = "radEmployee";
+            this.radEmployee.Size = new System.Drawing.Size(156, 35);
+            this.radEmployee.TabIndex = 4;
+            this.radEmployee.TabStop = true;
+            this.radEmployee.Text = "Employee";
+            this.radEmployee.UseVisualStyleBackColor = false;
             // 
-            // btnCashin
+            // txtNumInput
             // 
-            this.btnCashin.BackColor = System.Drawing.Color.Olive;
-            this.btnCashin.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCashin.Location = new System.Drawing.Point(375, 273);
-            this.btnCashin.Name = "btnCashin";
-            this.btnCashin.Size = new System.Drawing.Size(202, 63);
-            this.btnCashin.TabIndex = 5;
-            this.btnCashin.Text = "CASH IN";
-            this.btnCashin.UseVisualStyleBackColor = false;
-            this.btnCashin.Click += new System.EventHandler(this.btnCashin_Click);
+            this.txtNumInput.Location = new System.Drawing.Point(678, 155);
+            this.txtNumInput.Name = "txtNumInput";
+            this.txtNumInput.Size = new System.Drawing.Size(257, 31);
+            this.txtNumInput.TabIndex = 5;
+            // 
+            // btnNum1
+            // 
+            this.btnNum1.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnNum1.Location = new System.Drawing.Point(678, 203);
+            this.btnNum1.Name = "btnNum1";
+            this.btnNum1.Size = new System.Drawing.Size(66, 48);
+            this.btnNum1.TabIndex = 6;
+            this.btnNum1.Text = "1";
+            this.btnNum1.UseVisualStyleBackColor = false;
+            this.btnNum1.Click += new System.EventHandler(this.btnNum1_Click);
+            // 
+            // btnNum2
+            // 
+            this.btnNum2.Location = new System.Drawing.Point(772, 203);
+            this.btnNum2.Name = "btnNum2";
+            this.btnNum2.Size = new System.Drawing.Size(66, 48);
+            this.btnNum2.TabIndex = 7;
+            this.btnNum2.Text = "2";
+            this.btnNum2.UseVisualStyleBackColor = true;
+            this.btnNum2.Click += new System.EventHandler(this.btnNum2_Click);
+            // 
+            // btnNum3
+            // 
+            this.btnNum3.Location = new System.Drawing.Point(869, 203);
+            this.btnNum3.Name = "btnNum3";
+            this.btnNum3.Size = new System.Drawing.Size(66, 48);
+            this.btnNum3.TabIndex = 8;
+            this.btnNum3.Text = "3";
+            this.btnNum3.UseVisualStyleBackColor = true;
+            this.btnNum3.Click += new System.EventHandler(this.btnNum3_Click);
+            // 
+            // btnNum4
+            // 
+            this.btnNum4.Location = new System.Drawing.Point(678, 265);
+            this.btnNum4.Name = "btnNum4";
+            this.btnNum4.Size = new System.Drawing.Size(66, 48);
+            this.btnNum4.TabIndex = 9;
+            this.btnNum4.Text = "4";
+            this.btnNum4.UseVisualStyleBackColor = true;
+            this.btnNum4.Click += new System.EventHandler(this.btnNum4_Click);
+            // 
+            // btnNum5
+            // 
+            this.btnNum5.Location = new System.Drawing.Point(772, 265);
+            this.btnNum5.Name = "btnNum5";
+            this.btnNum5.Size = new System.Drawing.Size(66, 48);
+            this.btnNum5.TabIndex = 10;
+            this.btnNum5.Text = "5";
+            this.btnNum5.UseVisualStyleBackColor = true;
+            this.btnNum5.Click += new System.EventHandler(this.btnNum5_Click);
+            // 
+            // btnNum6
+            // 
+            this.btnNum6.Location = new System.Drawing.Point(869, 265);
+            this.btnNum6.Name = "btnNum6";
+            this.btnNum6.Size = new System.Drawing.Size(66, 48);
+            this.btnNum6.TabIndex = 11;
+            this.btnNum6.Text = "6";
+            this.btnNum6.UseVisualStyleBackColor = true;
+            this.btnNum6.Click += new System.EventHandler(this.btnNum6_Click);
+            // 
+            // btnNum7
+            // 
+            this.btnNum7.Location = new System.Drawing.Point(678, 329);
+            this.btnNum7.Name = "btnNum7";
+            this.btnNum7.Size = new System.Drawing.Size(66, 48);
+            this.btnNum7.TabIndex = 12;
+            this.btnNum7.Text = "7";
+            this.btnNum7.UseVisualStyleBackColor = true;
+            this.btnNum7.Click += new System.EventHandler(this.btnNum7_Click);
+            // 
+            // btnNum8
+            // 
+            this.btnNum8.Location = new System.Drawing.Point(772, 329);
+            this.btnNum8.Name = "btnNum8";
+            this.btnNum8.Size = new System.Drawing.Size(66, 48);
+            this.btnNum8.TabIndex = 13;
+            this.btnNum8.Text = "8";
+            this.btnNum8.UseVisualStyleBackColor = true;
+            this.btnNum8.Click += new System.EventHandler(this.btnNum8_Click);
+            // 
+            // btnNum9
+            // 
+            this.btnNum9.Location = new System.Drawing.Point(869, 329);
+            this.btnNum9.Name = "btnNum9";
+            this.btnNum9.Size = new System.Drawing.Size(66, 48);
+            this.btnNum9.TabIndex = 14;
+            this.btnNum9.Text = "9";
+            this.btnNum9.UseVisualStyleBackColor = true;
+            this.btnNum9.Click += new System.EventHandler(this.btnNum9_Click);
+            // 
+            // btnNumC
+            // 
+            this.btnNumC.Location = new System.Drawing.Point(678, 396);
+            this.btnNumC.Name = "btnNumC";
+            this.btnNumC.Size = new System.Drawing.Size(66, 48);
+            this.btnNumC.TabIndex = 15;
+            this.btnNumC.Text = "C";
+            this.btnNumC.UseVisualStyleBackColor = true;
+            this.btnNumC.Click += new System.EventHandler(this.btnNumC_Click);
+            // 
+            // btnNum0
+            // 
+            this.btnNum0.Location = new System.Drawing.Point(772, 396);
+            this.btnNum0.Name = "btnNum0";
+            this.btnNum0.Size = new System.Drawing.Size(66, 48);
+            this.btnNum0.TabIndex = 16;
+            this.btnNum0.Text = "0";
+            this.btnNum0.UseVisualStyleBackColor = true;
+            // 
+            // btnNumOK
+            // 
+            this.btnNumOK.Location = new System.Drawing.Point(869, 396);
+            this.btnNumOK.Name = "btnNumOK";
+            this.btnNumOK.Size = new System.Drawing.Size(66, 48);
+            this.btnNumOK.TabIndex = 17;
+            this.btnNumOK.Text = "OK";
+            this.btnNumOK.UseVisualStyleBackColor = true;
+            this.btnNumOK.Click += new System.EventHandler(this.btnNumOK_Click);
             // 
             // welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(793, 557);
-            this.Controls.Add(this.btnCashin);
-            this.Controls.Add(this.btnCash);
-            this.Controls.Add(this.btnEmp);
-            this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.btnDine);
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(1061, 558);
+            this.Controls.Add(this.btnNumOK);
+            this.Controls.Add(this.btnNum0);
+            this.Controls.Add(this.btnNumC);
+            this.Controls.Add(this.btnNum9);
+            this.Controls.Add(this.btnNum8);
+            this.Controls.Add(this.btnNum7);
+            this.Controls.Add(this.btnNum6);
+            this.Controls.Add(this.btnNum5);
+            this.Controls.Add(this.btnNum4);
+            this.Controls.Add(this.btnNum3);
+            this.Controls.Add(this.btnNum2);
+            this.Controls.Add(this.btnNum1);
+            this.Controls.Add(this.txtNumInput);
+            this.Controls.Add(this.radEmployee);
+            this.Controls.Add(this.radManager);
+            this.Controls.Add(this.radAdmin);
+            this.Controls.Add(this.btnLoginIn);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "welcome";
             this.Text = "welcome";
             this.ResumeLayout(false);
@@ -132,10 +276,22 @@
         #endregion
 
         private Label label1;
-        private Button btnDine;
-        private Button btnAdmin;
-        private Button btnEmp;
-        private Button btnCash;
-        private Button btnCashin;
+        private Button btnLoginIn;
+        private RadioButton radAdmin;
+        private RadioButton radManager;
+        private RadioButton radEmployee;
+        private TextBox txtNumInput;
+        private Button btnNum1;
+        private Button btnNum2;
+        private Button btnNum3;
+        private Button btnNum4;
+        private Button btnNum5;
+        private Button btnNum6;
+        private Button btnNum7;
+        private Button btnNum8;
+        private Button btnNum9;
+        private Button btnNumC;
+        private Button btnNum0;
+        private Button btnNumOK;
     }
 }
