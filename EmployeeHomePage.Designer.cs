@@ -29,56 +29,56 @@
         private void InitializeComponent()
         {
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnOrderHistory = new System.Windows.Forms.Button();
+            this.btnDineIn = new System.Windows.Forms.Button();
+            this.btnChangeMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(213, 131);
+            this.btnLogOut.Location = new System.Drawing.Point(181, 160);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(112, 34);
+            this.btnLogOut.Size = new System.Drawing.Size(144, 56);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "LogOut";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // btnOrderHistory
             // 
-            this.button1.Location = new System.Drawing.Point(213, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOrderHistory.Location = new System.Drawing.Point(181, 304);
+            this.btnOrderHistory.Name = "btnOrderHistory";
+            this.btnOrderHistory.Size = new System.Drawing.Size(144, 53);
+            this.btnOrderHistory.TabIndex = 1;
+            this.btnOrderHistory.Text = "Order History";
+            this.btnOrderHistory.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDineIn
             // 
-            this.button2.Location = new System.Drawing.Point(415, 139);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDineIn.Location = new System.Drawing.Point(415, 160);
+            this.btnDineIn.Name = "btnDineIn";
+            this.btnDineIn.Size = new System.Drawing.Size(112, 56);
+            this.btnDineIn.TabIndex = 2;
+            this.btnDineIn.Text = "Dine IN";
+            this.btnDineIn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnChangeMenu
             // 
-            this.button3.Location = new System.Drawing.Point(415, 227);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 34);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnChangeMenu.Location = new System.Drawing.Point(415, 313);
+            this.btnChangeMenu.Name = "btnChangeMenu";
+            this.btnChangeMenu.Size = new System.Drawing.Size(168, 44);
+            this.btnChangeMenu.TabIndex = 3;
+            this.btnChangeMenu.Text = "Change Menu";
+            this.btnChangeMenu.UseVisualStyleBackColor = true;
             // 
             // EmployeeHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnChangeMenu);
+            this.Controls.Add(this.btnDineIn);
+            this.Controls.Add(this.btnOrderHistory);
             this.Controls.Add(this.btnLogOut);
             this.Name = "EmployeeHomePage";
             this.Text = "EmployeeHomePage";
@@ -89,8 +89,8 @@
         #endregion
 
         private Button btnLogOut;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnOrderHistory;
+        private Button btnDineIn;
+        private Button btnChangeMenu;
     }
 }
