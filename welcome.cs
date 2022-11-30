@@ -17,7 +17,7 @@ namespace ResturantPOS
         public Menu menu;
         public Form2 form2;
         public AdminHomePage adminHomePage;
-        public EmployeeHomePage employeeHomePage;
+       
         public string pass = "";
         public welcome()
         {
@@ -28,7 +28,7 @@ namespace ResturantPOS
             form2= new Form2();
             form2= new Form2();
             adminHomePage = new AdminHomePage();
-            employeeHomePage = new EmployeeHomePage();  
+           
             pass = "";
 
         }
@@ -119,7 +119,10 @@ namespace ResturantPOS
 
         private void btnNumOK_Click(object sender, EventArgs e)
         {
-            if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
+            Menu menu = new Menu();
+            this.Hide();
+            menu.Show();
+         /*   if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
             {
                 MessageBox.Show("Please Select Any Option. You are login As ?");
             }
@@ -135,14 +138,16 @@ namespace ResturantPOS
             }
             else if (radEmployee.Checked && pass == "3456")
             {
-                MessageBox.Show(pass + " Employee Password Match");
+               MessageBox.Show(pass + " Employee Password Match");
+                EmployeeHomePage emphome=new EmployeeHomePage();
+                emphome.Show();
                 this.Hide();
-                employeeHomePage.Show();
+               
             }
             else
             {
                 MessageBox.Show("Password doesn't Match");
-            }
+            }*/
         }
     }
 }

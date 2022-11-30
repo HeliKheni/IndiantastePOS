@@ -12,17 +12,37 @@ namespace ResturantPOS
 {
     public partial class EmployeeHomePage : Form
     {
-     //   welcome welcomepage;
+        
         public EmployeeHomePage()
         {
             InitializeComponent();
-          //  welcomepage = new welcome();
+          
+        }
+        
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            welcome welcomepage = new welcome();
+            welcomepage.Show();
+            this.Hide();
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDineIn_Click(object sender, EventArgs e)
         {
-           // this.Close();
-            //welcomepage.Show();
+            Menu menupage = new Menu();
+            this.Hide();
+            menupage.Show();
+        }
+
+        private void btnOrderHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChangeMenu_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

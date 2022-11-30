@@ -36,50 +36,58 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(181, 160);
+            this.btnLogOut.Location = new System.Drawing.Point(90, 45);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(144, 56);
+            this.btnLogOut.Size = new System.Drawing.Size(115, 45);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "LogOut";
             this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnOrderHistory
             // 
-            this.btnOrderHistory.Location = new System.Drawing.Point(181, 304);
+            this.btnOrderHistory.Location = new System.Drawing.Point(90, 126);
+            this.btnOrderHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderHistory.Name = "btnOrderHistory";
-            this.btnOrderHistory.Size = new System.Drawing.Size(144, 53);
+            this.btnOrderHistory.Size = new System.Drawing.Size(115, 42);
             this.btnOrderHistory.TabIndex = 1;
             this.btnOrderHistory.Text = "Order History";
             this.btnOrderHistory.UseVisualStyleBackColor = true;
+            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
             // 
             // btnDineIn
             // 
-            this.btnDineIn.Location = new System.Drawing.Point(415, 160);
+            this.btnDineIn.Location = new System.Drawing.Point(254, 45);
+            this.btnDineIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnDineIn.Name = "btnDineIn";
-            this.btnDineIn.Size = new System.Drawing.Size(112, 56);
+            this.btnDineIn.Size = new System.Drawing.Size(90, 45);
             this.btnDineIn.TabIndex = 2;
             this.btnDineIn.Text = "Dine IN";
             this.btnDineIn.UseVisualStyleBackColor = true;
+            this.btnDineIn.Click += new System.EventHandler(this.btnDineIn_Click);
             // 
             // btnChangeMenu
             // 
-            this.btnChangeMenu.Location = new System.Drawing.Point(415, 313);
+            this.btnChangeMenu.Location = new System.Drawing.Point(254, 130);
+            this.btnChangeMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeMenu.Name = "btnChangeMenu";
-            this.btnChangeMenu.Size = new System.Drawing.Size(168, 44);
+            this.btnChangeMenu.Size = new System.Drawing.Size(134, 35);
             this.btnChangeMenu.TabIndex = 3;
             this.btnChangeMenu.Text = "Change Menu";
             this.btnChangeMenu.UseVisualStyleBackColor = true;
+            this.btnChangeMenu.Click += new System.EventHandler(this.btnChangeMenu_Click);
             // 
             // EmployeeHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(640, 360);
             this.Controls.Add(this.btnChangeMenu);
             this.Controls.Add(this.btnDineIn);
             this.Controls.Add(this.btnOrderHistory);
             this.Controls.Add(this.btnLogOut);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmployeeHomePage";
             this.Text = "EmployeeHomePage";
             this.ResumeLayout(false);
