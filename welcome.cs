@@ -122,7 +122,7 @@ namespace ResturantPOS
             Menu menu = new Menu();
             this.Hide();
             menu.Show();
-         /*   if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
+           if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
             {
                 MessageBox.Show("Please Select Any Option. You are login As ?");
             }
@@ -135,6 +135,8 @@ namespace ResturantPOS
             else if (radManager.Checked && pass == "2345")
             {
                 MessageBox.Show(pass + " Manager Password Match");
+                this.Hide();
+                cashOut.Show();
             }
             else if (radEmployee.Checked && pass == "3456")
             {
@@ -147,7 +149,7 @@ namespace ResturantPOS
             else
             {
                 MessageBox.Show("Password doesn't Match");
-            }*/
+            }
         }
     }
 }
