@@ -1,6 +1,6 @@
 ﻿namespace ResturantPOS
 {
-    partial class Employee
+    partial  class Employee
     {
         /// <summary>
         /// Required designer variable.
@@ -35,11 +35,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.EId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,49 +111,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EId,
-            this.EName,
-            this.EEmail,
-            this.EPhone,
-            this.EHours});
-            this.dataGridView1.Location = new System.Drawing.Point(85, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(85, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(577, 258);
             this.dataGridView1.TabIndex = 9;
             // 
-            // EId
-            // 
-            this.EId.HeaderText = "ID";
-            this.EId.Name = "EId";
-            // 
-            // EName
-            // 
-            this.EName.HeaderText = "Name";
-            this.EName.Name = "EName";
-            // 
-            // EEmail
-            // 
-            this.EEmail.HeaderText = "Email";
-            this.EEmail.Name = "EEmail";
-            // 
-            // EPhone
-            // 
-            this.EPhone.HeaderText = "Phone";
-            this.EPhone.Name = "EPhone";
-            // 
-            // EHours
-            // 
-            this.EHours.HeaderText = "Hours";
-            this.EHours.Name = "EHours";
-            // 
-            // Form2
+            // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(747, 450);
+            this.ClientSize = new System.Drawing.Size(747, 421);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
@@ -166,8 +131,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAddEmp);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form2";
+            this.Name = "Employee";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,11 +148,13 @@
         private Label lblSearch;
         private ComboBox comboBox1;
         private TextBox textBox1;
-        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn EId;
         private DataGridViewTextBoxColumn EName;
         private DataGridViewTextBoxColumn EEmail;
         private DataGridViewTextBoxColumn EPhone;
         private DataGridViewTextBoxColumn EHours;
+        public DataGridView gridViewemp;
+        public DataGridView dataGridView1;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
