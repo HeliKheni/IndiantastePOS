@@ -15,7 +15,7 @@ namespace ResturantPOS
         public cashOut cashOut;
         public Form1 cashIn;
         public Menu menu;
-        public Form2 form2;
+        public Employee form2;
         public AdminHomePage adminHomePage;
        
         public string pass = "";
@@ -25,8 +25,8 @@ namespace ResturantPOS
             cashOut = new cashOut();
             cashIn = new Form1();
             menu = new Menu();
-            form2= new Form2();
-            form2= new Form2();
+            form2= new Employee();
+            form2= new Employee();
             adminHomePage = new AdminHomePage();
            
             pass = "";

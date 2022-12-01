@@ -1,6 +1,6 @@
 ﻿namespace ResturantPOS
 {
-    partial class Form2
+    partial class Employee
     {
         /// <summary>
         /// Required designer variable.

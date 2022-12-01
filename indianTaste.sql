@@ -35,3 +35,12 @@ insert into Menu(item_name,Category,price) values('Roti','Bread',4.99);
 insert into Menu(item_name,Category,price) values('Rice Pudding','Dessert',6.99);
 insert into Menu(item_name,Category,price) values('Carrot Halwa','Dessert',4.99);
 insert into Menu(item_name,Category,price) values('GulabJambun','Dessert',5.99);
+
+create table Employee
+(
+	emp_id int Primary key,
+	emp_name varchar(300),
+	email varchar(20),
+	phone varchar(10),
+	hours float
+);

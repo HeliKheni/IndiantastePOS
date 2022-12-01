@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ResturantPOS
 {
-    public partial class Form2 : Form
+    public partial class Employee : Form
     {
         public AddEDetails addE;
-        public Form2()
+        public Employee()
         {
             InitializeComponent();
             addE= new AddEDetails();    
