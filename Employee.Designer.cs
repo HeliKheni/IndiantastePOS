@@ -32,10 +32,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Combosearch = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -81,32 +83,39 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSearch.Location = new System.Drawing.Point(356, 15);
+            this.lblSearch.Location = new System.Drawing.Point(335, 18);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(64, 15);
             this.lblSearch.TabIndex = 6;
             this.lblSearch.Text = "Search By";
             // 
-            // comboBox1
+            // Combosearch
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(444, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(107, 23);
-            this.comboBox1.TabIndex = 7;
+            this.Combosearch.FormattingEnabled = true;
+            this.Combosearch.Items.AddRange(new object[] {
+            "ID",
+            "Name",
+            "Email",
+            "Phone",
+            "Hours"});
+            this.Combosearch.Location = new System.Drawing.Point(405, 15);
+            this.Combosearch.Name = "Combosearch";
+            this.Combosearch.Size = new System.Drawing.Size(107, 23);
+            this.Combosearch.TabIndex = 7;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(589, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 8;
+            this.txtSearch.Location = new System.Drawing.Point(518, 15);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 23);
+            this.txtSearch.TabIndex = 8;
             // 
             // dataGridView1
             // 
@@ -114,8 +123,25 @@
             this.dataGridView1.Location = new System.Drawing.Point(85, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(577, 258);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
+            this.button3.FlatAppearance.BorderSize = 5;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(634, 3);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 45);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Employee
             // 
@@ -123,9 +149,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(747, 421);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.Combosearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -146,8 +173,8 @@
         private Button button2;
         private Button button1;
         private Label lblSearch;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private ComboBox Combosearch;
+        private TextBox txtSearch;
         private DataGridViewTextBoxColumn EId;
         private DataGridViewTextBoxColumn EName;
         private DataGridViewTextBoxColumn EEmail;
@@ -156,5 +183,6 @@
         public DataGridView gridViewemp;
         public DataGridView dataGridView1;
         public System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button button3;
     }
 }

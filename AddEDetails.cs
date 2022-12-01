@@ -40,10 +40,11 @@ namespace ResturantPOS
             cmd.ExecuteNonQuery();
             MessageBox.Show("inserted successfully.");
             
-            SqlDataAdapter sap = new SqlDataAdapter("select emp_id, emp_name, email, phone, hours from Employee", conn);
-            DataTable dt = new DataTable();
-            sap.Fill(dt);
-            employee.dataGridView1.DataSource = dt;
+            employee.dataBind();
+            //SqlDataAdapter sap = new SqlDataAdapter("select emp_id, emp_name, email, phone, hours from Employee", conn);
+            //DataTable dt = new DataTable();
+            //sap.Fill(dt);
+            //employee.dataGridView1.DataSource = dt;
         }
 
         private void button2_Click(object sender, EventArgs e)

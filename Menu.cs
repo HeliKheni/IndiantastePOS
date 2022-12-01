@@ -54,7 +54,7 @@ namespace ResturantPOS
             sql = "select item_name from Menu where Category='" + menutype+"'";
             cmd = new SqlCommand(sql, conn);
 
-            int sizex = 15;
+            int sizex = 15; 
             int sizey = 30;
             drreader = cmd.ExecuteReader();
             int nu = 1;
