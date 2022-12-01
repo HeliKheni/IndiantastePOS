@@ -120,8 +120,7 @@ namespace ResturantPOS
         private void btnNumOK_Click(object sender, EventArgs e)
         {
             Menu menu = new Menu();
-            this.Hide();
-            menu.Show();
+            
            if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
             {
                 MessageBox.Show("Please Select Any Option. You are login As ?");
@@ -130,7 +129,7 @@ namespace ResturantPOS
             {
                 MessageBox.Show(pass + " Admin Password Match");
                 this.Hide();
-                adminHomePage.Show();
+                form2.Show();
             }
             else if (radManager.Checked && pass == "2345")
             {
