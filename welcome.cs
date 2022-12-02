@@ -17,7 +17,7 @@ namespace ResturantPOS
         public Menu menu;
         public Employee form2;
         public AdminHomePage adminHomePage;
-       
+        public ManagerHomePage managerHomePage;
         public string pass = "";
         public welcome()
         {
@@ -28,7 +28,7 @@ namespace ResturantPOS
             form2= new Employee();
             form2= new Employee();
             adminHomePage = new AdminHomePage();
-           
+           managerHomePage = new ManagerHomePage();
             pass = "";
 
         }
@@ -135,7 +135,7 @@ namespace ResturantPOS
             {
                 MessageBox.Show(pass + " Manager Password Match");
                 this.Hide();
-                cashOut.Show();
+                managerHomePage.Show();
             }
             else if (radEmployee.Checked && pass == "3456")
             {

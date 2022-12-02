@@ -1,0 +1,95 @@
+﻿namespace ResturantPOS
+{
+    partial class ManagerHomePage
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnManageDetails = new System.Windows.Forms.Button();
+            this.btnCashIn = new System.Windows.Forms.Button();
+            this.btncashout = new System.Windows.Forms.Button();
+            this.Home = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnManageDetails
+            // 
+            this.btnManageDetails.Location = new System.Drawing.Point(59, 96);
+            this.btnManageDetails.Name = "btnManageDetails";
+            this.btnManageDetails.Size = new System.Drawing.Size(222, 29);
+            this.btnManageDetails.TabIndex = 0;
+            this.btnManageDetails.Text = "Manage Employee Details";
+            this.btnManageDetails.UseVisualStyleBackColor = true;
+            // 
+            // btnCashIn
+            // 
+            this.btnCashIn.Location = new System.Drawing.Point(324, 96);
+            this.btnCashIn.Name = "btnCashIn";
+            this.btnCashIn.Size = new System.Drawing.Size(94, 29);
+            this.btnCashIn.TabIndex = 1;
+            this.btnCashIn.Text = "CashIn";
+            this.btnCashIn.UseVisualStyleBackColor = true;
+            // 
+            // btncashout
+            // 
+            this.btncashout.Location = new System.Drawing.Point(59, 188);
+            this.btncashout.Name = "btncashout";
+            this.btncashout.Size = new System.Drawing.Size(94, 29);
+            this.btncashout.TabIndex = 2;
+            this.btncashout.Text = "CashOut";
+            this.btncashout.UseVisualStyleBackColor = true;
+            // 
+            // Home
+            // 
+            this.Home.Location = new System.Drawing.Point(204, 188);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(94, 29);
+            this.Home.TabIndex = 3;
+            this.Home.Text = "LogOut";
+            this.Home.UseVisualStyleBackColor = true;
+            // 
+            // ManagerHomePage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(696, 418);
+            this.Controls.Add(this.Home);
+            this.Controls.Add(this.btncashout);
+            this.Controls.Add(this.btnCashIn);
+            this.Controls.Add(this.btnManageDetails);
+            this.Name = "ManagerHomePage";
+            this.Text = "ManagerHomePage";
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Button btnManageDetails;
+        private Button btnCashIn;
+        private Button btncashout;
+        private Button Home;
+    }
+}
