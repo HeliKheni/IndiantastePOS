@@ -26,10 +26,6 @@ namespace ResturantPOS
         {
             decimal totalcash = 0;
             decimal cash=0, credit=0, debit=0, tips=0;
-           /* decimal cash = Convert.ToDecimal(txtCash.Text);
-            decimal credit = Convert.ToDecimal(txtCredit.Text);
-            decimal debit = Convert.ToDecimal(txtDebit.Text);
-            decimal tips = Convert.ToDecimal(txtTips.Text);*/
             if(IsNull(txtCash) && IsDecimal(txtCash) && IsWithinRange(txtDebit, 0, 10000))
             {
                  cash = Convert.ToDecimal(txtCash.Text);
@@ -60,7 +56,7 @@ namespace ResturantPOS
                 return true;
             else
             {
-                MessageBox.Show(textBox.Text + "  should be a decimal Number", "Error");
+                MessageBox.Show(textBox.Text + "Entered value should be a decimal Number", "Error");
                 textBox.Focus();
                 return false;
 
@@ -70,7 +66,7 @@ namespace ResturantPOS
         {
             if (textbox.Text == "")
             {
-                MessageBox.Show("Value for subtotal is required! ", "Error");
+                MessageBox.Show(" All values for subtotal is required! ", "Error");
                 textbox.Focus();
                 return false;
             }
@@ -86,7 +82,7 @@ namespace ResturantPOS
                 return true;
             else
             {
-                MessageBox.Show("Value of subtotal must be positivie");
+                MessageBox.Show(" All Values for subtotal must be positivie");
                 return false;
             }
 

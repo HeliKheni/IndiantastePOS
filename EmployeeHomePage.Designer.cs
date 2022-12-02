@@ -50,7 +50,7 @@
             this.btnOrderHistory.Location = new System.Drawing.Point(90, 126);
             this.btnOrderHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderHistory.Name = "btnOrderHistory";
-            this.btnOrderHistory.Size = new System.Drawing.Size(115, 42);
+            this.btnOrderHistory.Size = new System.Drawing.Size(115, 39);
             this.btnOrderHistory.TabIndex = 1;
             this.btnOrderHistory.Text = "Order History";
             this.btnOrderHistory.UseVisualStyleBackColor = true;

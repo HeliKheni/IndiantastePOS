@@ -133,7 +133,7 @@ namespace ResturantPOS
                 return true;
             else
             {
-                MessageBox.Show(textBox.Text + "  should be a decimal Number", "Error");
+                MessageBox.Show(textBox.Text + "All values should be a decimal Number", "Error");
                 textBox.Focus();
                 return false;
 
@@ -143,7 +143,7 @@ namespace ResturantPOS
         {
             if (textbox.Text == "")
             {
-                MessageBox.Show("Value for subtotal is required! ", "Error");
+                MessageBox.Show("All value for subtotal is required! ", "Error");
                 textbox.Focus();
                 return false;
             }
