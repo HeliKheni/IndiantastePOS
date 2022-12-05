@@ -1,15 +1,28 @@
+using System.Data.SqlClient;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
+
 namespace ResturantPOS
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private CashInDetails cashInDetails;
+      public  string total;
+        private ManagerHomePage managerHomePage;
+
+        public Form1(ManagerHomePage managerHomePage)
         {
             InitializeComponent();
+            cashInDetails = new CashInDetails(this);    
+            this.managerHomePage = managerHomePage;
+        }
+
+        public Form1()
+        {
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnTotalCash_Click(object sender, EventArgs e)
@@ -163,6 +176,30 @@ namespace ResturantPOS
                 return false;
             }
 
+        }
+
+        private void btnCashIN_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            string constr;
+            constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
+            conn = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand("INSERT calCash "
+    + "(openAmount) " + "VALUES (@openAmount)", conn);
+            cmd.Parameters.AddWithValue("openAmount", txtToalCashIn.Text);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Inserted Sucessfully");
+            conn.Close();
+            this.Hide();
+            total = txtToalCashIn.Text;
+            cashInDetails.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            managerHomePage.Show();
         }
     }
 }

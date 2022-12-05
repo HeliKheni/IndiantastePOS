@@ -41,6 +41,7 @@
             this.btnTotalcashOut = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotalCashout = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -174,12 +175,25 @@
             this.txtTotalCashout.Size = new System.Drawing.Size(213, 39);
             this.txtTotalCashout.TabIndex = 13;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(739, 527);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 48);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cashOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(925, 618);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTotalCashout);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnTotalcashOut);
@@ -217,5 +231,6 @@
         private Button btnTotalcashOut;
         private Label label6;
         private TextBox txtTotalCashout;
+        private Button button1;
     }
 }

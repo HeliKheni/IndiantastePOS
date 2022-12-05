@@ -39,7 +39,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnCashIN = new System.Windows.Forms.Button();
             this.txt5 = new System.Windows.Forms.TextBox();
             this.txt10 = new System.Windows.Forms.TextBox();
             this.txt20 = new System.Windows.Forms.TextBox();
@@ -53,6 +52,8 @@
             this.txtToalCashIn = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnTotalCash = new System.Windows.Forms.Button();
+            this.btnCashIN = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -160,22 +161,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(330, 538);
+            this.label11.Location = new System.Drawing.Point(322, 525);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 32);
             this.label11.TabIndex = 10;
             this.label11.Text = "Total :";
-            // 
-            // btnCashIN
-            // 
-            this.btnCashIN.BackColor = System.Drawing.Color.Khaki;
-            this.btnCashIN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCashIN.Location = new System.Drawing.Point(403, 607);
-            this.btnCashIN.Name = "btnCashIN";
-            this.btnCashIN.Size = new System.Drawing.Size(134, 52);
-            this.btnCashIN.TabIndex = 13;
-            this.btnCashIN.Text = "CASHIN";
-            this.btnCashIN.UseVisualStyleBackColor = false;
             // 
             // txt5
             // 
@@ -269,7 +259,7 @@
             // txtToalCashIn
             // 
             this.txtToalCashIn.BackColor = System.Drawing.SystemColors.Info;
-            this.txtToalCashIn.Location = new System.Drawing.Point(425, 539);
+            this.txtToalCashIn.Location = new System.Drawing.Point(439, 528);
             this.txtToalCashIn.Name = "txtToalCashIn";
             this.txtToalCashIn.ReadOnly = true;
             this.txtToalCashIn.Size = new System.Drawing.Size(150, 31);
@@ -290,13 +280,37 @@
             // 
             this.btnTotalCash.BackColor = System.Drawing.Color.Khaki;
             this.btnTotalCash.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTotalCash.Location = new System.Drawing.Point(410, 463);
+            this.btnTotalCash.Location = new System.Drawing.Point(425, 463);
             this.btnTotalCash.Name = "btnTotalCash";
-            this.btnTotalCash.Size = new System.Drawing.Size(127, 44);
+            this.btnTotalCash.Size = new System.Drawing.Size(177, 44);
             this.btnTotalCash.TabIndex = 27;
             this.btnTotalCash.Text = "TOTAL";
             this.btnTotalCash.UseVisualStyleBackColor = false;
             this.btnTotalCash.Click += new System.EventHandler(this.btnTotalCash_Click);
+            // 
+            // btnCashIN
+            // 
+            this.btnCashIN.BackColor = System.Drawing.Color.Khaki;
+            this.btnCashIN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCashIN.Location = new System.Drawing.Point(425, 594);
+            this.btnCashIN.Name = "btnCashIN";
+            this.btnCashIN.Size = new System.Drawing.Size(177, 52);
+            this.btnCashIN.TabIndex = 13;
+            this.btnCashIN.Text = "CASHIN";
+            this.btnCashIN.UseVisualStyleBackColor = false;
+            this.btnCashIN.Click += new System.EventHandler(this.btnCashIN_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(681, 655);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 47);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -304,6 +318,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(868, 714);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTotalCash);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtToalCashIn);
@@ -349,7 +364,6 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private Button btnCashIN;
         private TextBox txt5;
         private TextBox txt10;
         private TextBox txt20;
@@ -363,5 +377,7 @@
         private TextBox txtToalCashIn;
         private Label label12;
         private Button btnTotalCash;
+        private Button btnCashIN;
+        private Button button1;
     }
 }

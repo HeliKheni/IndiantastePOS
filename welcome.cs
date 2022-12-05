@@ -28,10 +28,12 @@ namespace ResturantPOS
             form2= new Employee();
             form2= new Employee();
             adminHomePage = new AdminHomePage();
-           managerHomePage = new ManagerHomePage();
+           managerHomePage = new ManagerHomePage(this);
             pass = "";
 
         }
+
+      
 
         private void btnCash_Click(object sender, EventArgs e)
         {

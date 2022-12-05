@@ -15,12 +15,12 @@ namespace ResturantPOS
         private welcome welcome;
         private Form1 cashIn;
         private cashOut cashOut;
-        public ManagerHomePage()
+        public ManagerHomePage(welcome welcome)
         {
             InitializeComponent();
-            welcome = new welcome();
-            Form1 cashIn = new Form1();
-            cashOut = new cashOut();
+            this.welcome = welcome;
+            cashIn = new Form1(this);
+            cashOut = new cashOut(this);
         }
 
         private void Home_Click(object sender, EventArgs e)

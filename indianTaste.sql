@@ -44,3 +44,11 @@ create table Employee
 	phone varchar(10),
 	hours float
 );
+
+
+create table calCash
+(
+openAmount money,
+closeAmount money default 0,
+added_at date DEFAULT GETDATE(),
+)

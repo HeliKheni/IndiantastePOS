@@ -12,9 +12,16 @@ namespace ResturantPOS
 {
     public partial class cashOut : Form
     {
-        public cashOut()
+        private ManagerHomePage managerHomePage;
+
+        public cashOut(ManagerHomePage managerHomePage)
         {
             InitializeComponent();
+            this.managerHomePage = managerHomePage;
+        }
+
+        public cashOut()
+        {
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -106,6 +113,12 @@ namespace ResturantPOS
         private void txtTips_TextChanged(object sender, EventArgs e)
         {
             txtTotalCashout.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            managerHomePage.Show();
         }
     }
 }
