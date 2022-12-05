@@ -28,8 +28,8 @@ namespace ResturantPOS
         public void Connect()
         {
             //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
-            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
-
+           // constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
             conn = new SqlConnection(constr);
             conn.Open();
             Console.WriteLine("Connection open");
@@ -41,7 +41,6 @@ namespace ResturantPOS
             SqlCommand cmd = new SqlCommand("insert into Employee values('" + txtId.Text + "', '" + txtName.Text + "', '" + txtEmail.Text + "', '"+  txtPhone.Text+  "', '" + txtHours.Text + "')", conn);
             cmd.ExecuteNonQuery();
             MessageBox.Show("inserted successfully.");
-            
             employee.dataBind();
             //SqlDataAdapter sap = new SqlDataAdapter("select emp_id, emp_name, email, phone, hours from Employee", conn);
             //DataTable dt = new DataTable();
