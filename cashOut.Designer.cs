@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(321, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 38);
+            this.label1.Size = new System.Drawing.Size(259, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Cash Out Details";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -64,7 +64,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(102, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 32);
+            this.label2.Size = new System.Drawing.Size(115, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Debit Card :";
             // 
@@ -75,7 +75,7 @@
             this.lable3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lable3.Location = new System.Drawing.Point(519, 121);
             this.lable3.Name = "lable3";
-            this.lable3.Size = new System.Drawing.Size(146, 32);
+            this.lable3.Size = new System.Drawing.Size(120, 28);
             this.lable3.TabIndex = 2;
             this.lable3.Text = "Credit Card :";
             // 
@@ -85,7 +85,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(102, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 32);
+            this.label4.Size = new System.Drawing.Size(62, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cash :";
             // 
@@ -95,7 +95,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(524, 213);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 32);
+            this.label5.Size = new System.Drawing.Size(51, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tips:";
             // 
@@ -104,7 +104,7 @@
             this.txtDebit.BackColor = System.Drawing.SystemColors.Info;
             this.txtDebit.Location = new System.Drawing.Point(248, 121);
             this.txtDebit.Name = "txtDebit";
-            this.txtDebit.Size = new System.Drawing.Size(196, 39);
+            this.txtDebit.Size = new System.Drawing.Size(196, 34);
             this.txtDebit.TabIndex = 5;
             this.txtDebit.TextChanged += new System.EventHandler(this.txtDebit_TextChanged);
             // 
@@ -113,7 +113,7 @@
             this.txtCash.BackColor = System.Drawing.SystemColors.Info;
             this.txtCash.Location = new System.Drawing.Point(248, 213);
             this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(196, 39);
+            this.txtCash.Size = new System.Drawing.Size(196, 34);
             this.txtCash.TabIndex = 6;
             this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged);
             // 
@@ -122,7 +122,7 @@
             this.txtCredit.BackColor = System.Drawing.SystemColors.Info;
             this.txtCredit.Location = new System.Drawing.Point(671, 114);
             this.txtCredit.Name = "txtCredit";
-            this.txtCredit.Size = new System.Drawing.Size(191, 39);
+            this.txtCredit.Size = new System.Drawing.Size(191, 34);
             this.txtCredit.TabIndex = 7;
             this.txtCredit.TextChanged += new System.EventHandler(this.txtCredit_TextChanged);
             // 
@@ -131,7 +131,7 @@
             this.txtTips.BackColor = System.Drawing.SystemColors.Info;
             this.txtTips.Location = new System.Drawing.Point(671, 206);
             this.txtTips.Name = "txtTips";
-            this.txtTips.Size = new System.Drawing.Size(191, 39);
+            this.txtTips.Size = new System.Drawing.Size(191, 34);
             this.txtTips.TabIndex = 8;
             this.txtTips.TextChanged += new System.EventHandler(this.txtTips_TextChanged);
             // 
@@ -145,6 +145,7 @@
             this.btncashOut.TabIndex = 9;
             this.btncashOut.Text = "CASHOUT";
             this.btncashOut.UseVisualStyleBackColor = false;
+            this.btncashOut.Click += new System.EventHandler(this.btncashOut_Click);
             // 
             // btnTotalcashOut
             // 
@@ -163,7 +164,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(286, 423);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 32);
+            this.label6.Size = new System.Drawing.Size(63, 28);
             this.label6.TabIndex = 12;
             this.label6.Text = "Total :";
             // 
@@ -172,7 +173,7 @@
             this.txtTotalCashout.BackColor = System.Drawing.SystemColors.Info;
             this.txtTotalCashout.Location = new System.Drawing.Point(408, 416);
             this.txtTotalCashout.Name = "txtTotalCashout";
-            this.txtTotalCashout.Size = new System.Drawing.Size(213, 39);
+            this.txtTotalCashout.Size = new System.Drawing.Size(213, 34);
             this.txtTotalCashout.TabIndex = 13;
             // 
             // button1
@@ -189,7 +190,7 @@
             // 
             // cashOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(925, 618);

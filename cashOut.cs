@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -119,6 +120,20 @@ namespace ResturantPOS
         {
             this.Hide();
             managerHomePage.Show();
+        }
+        SqlConnection conn;
+        string constr;
+        public void connect()
+        {
+
+            //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+
+            conn = new SqlConnection(constr);
+        }
+        private void btncashOut_Click(object sender, EventArgs e)
+        {
+            connect();
         }
     }
 }

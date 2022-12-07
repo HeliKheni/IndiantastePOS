@@ -28,8 +28,8 @@ namespace ResturantPOS
         public void Connect()
         {
             //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
-           // constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
-            constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+           // constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
             conn = new SqlConnection(constr);
             conn.Open();
             Console.WriteLine("Connection open");

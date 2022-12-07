@@ -1,4 +1,5 @@
 using System.Data.SqlClient;
+using System.Reflection.PortableExecutable;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace ResturantPOS
@@ -8,7 +9,8 @@ namespace ResturantPOS
         private CashInDetails cashInDetails;
       public  string total;
         private ManagerHomePage managerHomePage;
-
+        SqlConnection conn;
+        string constr;
         public Form1(ManagerHomePage managerHomePage)
         {
             InitializeComponent();
@@ -22,7 +24,26 @@ namespace ResturantPOS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            connect();
+
+            SqlCommand cmd;
+            SqlDataReader drreader;
+            String sql, output = "";
+            DateTime now = DateTime.Now;
+
+            sql = "select * from calCash where added_at=" + now.ToShortDateString();
+            cmd = new SqlCommand(sql, conn);
+            drreader = cmd.ExecuteReader();
+            int nu = 1;
+            if (drreader.Read())
+            {
+                MessageBox.Show("YOU Already cash In for Today");
+                CashInDetails cashpage = new CashInDetails(this);
+                cashpage.Show();
+                this.Close();
+                
+            }
+            conn.Close();
         }
 
         private void btnTotalCash_Click(object sender, EventArgs e)
@@ -177,23 +198,36 @@ namespace ResturantPOS
             }
 
         }
+        
+        public void connect()
+        {
+            
+            //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+
+            conn = new SqlConnection(constr);
+        }
 
         private void btnCashIN_Click(object sender, EventArgs e)
         {
-            SqlConnection conn;
-            string constr;
-            constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
-            conn = new SqlConnection(constr);
-            SqlCommand cmd = new SqlCommand("INSERT calCash "
-    + "(openAmount) " + "VALUES (@openAmount)", conn);
-            cmd.Parameters.AddWithValue("openAmount", txtToalCashIn.Text);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Inserted Sucessfully");
+            connect();
+            SqlCommand cmd;
+            SqlDataReader drreader;
+            String sql, output = "";
+            DateTime now = DateTime.Now;
+            
+                SqlCommand cmd2 = new SqlCommand("INSERT calCash "
+                + "(openAmount) " + "VALUES (@openAmount)", conn);
+                cmd2.Parameters.AddWithValue("openAmount", txtToalCashIn.Text);
+                conn.Open();
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Inserted Sucessfully");
+                conn.Close();
+                this.Hide();
+                total = txtToalCashIn.Text;
+                cashInDetails.Show();
+
             conn.Close();
-            this.Hide();
-            total = txtToalCashIn.Text;
-            cashInDetails.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
