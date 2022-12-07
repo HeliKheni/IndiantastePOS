@@ -14,36 +14,27 @@ namespace ResturantPOS
         public Form1(ManagerHomePage managerHomePage)
         {
             InitializeComponent();
-            cashInDetails = new CashInDetails(this);    
+            cashInDetails = new CashInDetails();    
             this.managerHomePage = managerHomePage;
+           
         }
+        public void connect()
+        {
 
+            //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+
+            conn = new SqlConnection(constr);
+            conn.Open();
+        }
         public Form1()
         {
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            connect();
-
-            SqlCommand cmd;
-            SqlDataReader drreader;
-            String sql, output = "";
-            DateTime now = DateTime.Now;
-
-            sql = "select * from calCash where added_at=" + now.ToShortDateString();
-            cmd = new SqlCommand(sql, conn);
-            drreader = cmd.ExecuteReader();
-            int nu = 1;
-            if (drreader.Read())
-            {
-                MessageBox.Show("YOU Already cash In for Today");
-                CashInDetails cashpage = new CashInDetails(this);
-                cashpage.Show();
-                this.Close();
-                
-            }
-            conn.Close();
+           
         }
 
         private void btnTotalCash_Click(object sender, EventArgs e)
@@ -199,14 +190,7 @@ namespace ResturantPOS
 
         }
         
-        public void connect()
-        {
-            
-            //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
-            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
-
-            conn = new SqlConnection(constr);
-        }
+       
 
         private void btnCashIN_Click(object sender, EventArgs e)
         {
@@ -216,16 +200,17 @@ namespace ResturantPOS
             String sql, output = "";
             DateTime now = DateTime.Now;
             
-                SqlCommand cmd2 = new SqlCommand("INSERT calCash "
-                + "(openAmount) " + "VALUES (@openAmount)", conn);
-                cmd2.Parameters.AddWithValue("openAmount", txtToalCashIn.Text);
-                conn.Open();
-                cmd2.ExecuteNonQuery();
-                MessageBox.Show("Inserted Sucessfully");
-                conn.Close();
-                this.Hide();
-                total = txtToalCashIn.Text;
-                cashInDetails.Show();
+            SqlCommand cmd2 = new SqlCommand("INSERT calCash "
+            + "(openAmount) " + "VALUES (@openAmount)", conn);
+            cmd2.Parameters.AddWithValue("openAmount", txtToalCashIn.Text);
+              
+            cmd2.ExecuteNonQuery();
+            MessageBox.Show("Cash In Sucessfully");
+            conn.Close();
+            this.Hide();
+            total = txtToalCashIn.Text;
+            CashInDetails cpage = new CashInDetails();
+            cpage.Show();
 
             conn.Close();
         }
@@ -233,7 +218,8 @@ namespace ResturantPOS
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            managerHomePage.Show();
+            ManagerHomePage mpage = new ManagerHomePage();
+            mpage.Show();
         }
     }
 }

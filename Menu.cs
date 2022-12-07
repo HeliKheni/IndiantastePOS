@@ -95,6 +95,10 @@ namespace ResturantPOS
         }
         private void dynamicButton_Click(object sender, EventArgs e)
         {
+            string tr = this.Tag.ToString();
+            
+            listBox1.Items.Add(tr);
+
             listBox2.Items.Clear();
             Button button = sender as Button;
             

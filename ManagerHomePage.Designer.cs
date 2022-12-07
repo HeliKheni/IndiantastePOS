@@ -36,20 +36,19 @@
             // 
             // btnManageDetails
             // 
-            this.btnManageDetails.Location = new System.Drawing.Point(74, 120);
-            this.btnManageDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageDetails.Location = new System.Drawing.Point(59, 96);
             this.btnManageDetails.Name = "btnManageDetails";
-            this.btnManageDetails.Size = new System.Drawing.Size(278, 36);
+            this.btnManageDetails.Size = new System.Drawing.Size(222, 29);
             this.btnManageDetails.TabIndex = 0;
             this.btnManageDetails.Text = "Manage Employee Details";
             this.btnManageDetails.UseVisualStyleBackColor = true;
+            this.btnManageDetails.Click += new System.EventHandler(this.btnManageDetails_Click);
             // 
             // btnCashIn
             // 
-            this.btnCashIn.Location = new System.Drawing.Point(405, 120);
-            this.btnCashIn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCashIn.Location = new System.Drawing.Point(324, 96);
             this.btnCashIn.Name = "btnCashIn";
-            this.btnCashIn.Size = new System.Drawing.Size(118, 36);
+            this.btnCashIn.Size = new System.Drawing.Size(94, 29);
             this.btnCashIn.TabIndex = 1;
             this.btnCashIn.Text = "CashIn";
             this.btnCashIn.UseVisualStyleBackColor = true;
@@ -57,10 +56,9 @@
             // 
             // btncashout
             // 
-            this.btncashout.Location = new System.Drawing.Point(74, 235);
-            this.btncashout.Margin = new System.Windows.Forms.Padding(4);
+            this.btncashout.Location = new System.Drawing.Point(59, 188);
             this.btncashout.Name = "btncashout";
-            this.btncashout.Size = new System.Drawing.Size(118, 36);
+            this.btncashout.Size = new System.Drawing.Size(94, 29);
             this.btncashout.TabIndex = 2;
             this.btncashout.Text = "CashOut";
             this.btncashout.UseVisualStyleBackColor = true;
@@ -68,10 +66,9 @@
             // 
             // Home
             // 
-            this.Home.Location = new System.Drawing.Point(255, 235);
-            this.Home.Margin = new System.Windows.Forms.Padding(4);
+            this.Home.Location = new System.Drawing.Point(204, 188);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(118, 36);
+            this.Home.Size = new System.Drawing.Size(94, 29);
             this.Home.TabIndex = 3;
             this.Home.Text = "LogOut";
             this.Home.UseVisualStyleBackColor = true;
@@ -79,14 +76,13 @@
             // 
             // ManagerHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 522);
+            this.ClientSize = new System.Drawing.Size(545, 339);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.btncashout);
             this.Controls.Add(this.btnCashIn);
             this.Controls.Add(this.btnManageDetails);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManagerHomePage";
             this.Text = "ManagerHomePage";
             this.ResumeLayout(false);

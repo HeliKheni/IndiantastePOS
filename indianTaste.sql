@@ -46,9 +46,13 @@ create table Employee
 );
 
 
+
 create table calCash
 (
 openAmount money,
 closeAmount money default 0,
 added_at date DEFAULT GETDATE(),
+debitAmount money default 0,
+creditAmount money default 0,
+tipsAmount money default 0
 )

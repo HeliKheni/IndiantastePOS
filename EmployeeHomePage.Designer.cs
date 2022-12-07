@@ -36,7 +36,7 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(90, 45);
+            this.btnLogOut.Location = new System.Drawing.Point(245, 126);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(115, 45);
@@ -58,7 +58,7 @@
             // 
             // btnDineIn
             // 
-            this.btnDineIn.Location = new System.Drawing.Point(254, 45);
+            this.btnDineIn.Location = new System.Drawing.Point(100, 44);
             this.btnDineIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnDineIn.Name = "btnDineIn";
             this.btnDineIn.Size = new System.Drawing.Size(90, 45);
@@ -69,7 +69,7 @@
             // 
             // btnChangeMenu
             // 
-            this.btnChangeMenu.Location = new System.Drawing.Point(254, 130);
+            this.btnChangeMenu.Location = new System.Drawing.Point(245, 44);
             this.btnChangeMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeMenu.Name = "btnChangeMenu";
             this.btnChangeMenu.Size = new System.Drawing.Size(134, 35);

@@ -23,6 +23,7 @@ namespace ResturantPOS
 
         public cashOut()
         {
+            InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,22 +38,22 @@ namespace ResturantPOS
             if(IsNull(txtCash) && IsDecimal(txtCash) && IsWithinRange(txtDebit, 0, 10000))
             {
                  cash = Convert.ToDecimal(txtCash.Text);
-                cash += cash * 1;
+              //  cash += cash * 1;
             }
             if (IsNull(txtCredit) && IsDecimal(txtCredit) && IsWithinRange(txtCredit, 0, 10000))
             {
                  credit = Convert.ToDecimal(txtCredit.Text);
-                credit += credit * 1;
+              //  credit += credit * 1;
             }
             if (IsNull(txtDebit) && IsDecimal(txtDebit) && IsWithinRange(txtDebit, 0, 10000))
             {
                  debit = Convert.ToDecimal(txtDebit.Text);
-                debit += debit * 1;
+                //debit += debit * 1;
             }
             if (IsNull(txtTips) && IsDecimal(txtTips) && IsWithinRange(txtTips, 0, 10000))
             {
                  tips = Convert.ToDecimal(txtTips.Text);
-                tips += tips * 1;
+               // tips += tips * 1;
             }
             totalcash = cash + credit + tips + debit;
             txtTotalCashout.Text = totalcash.ToString("c2");
@@ -130,10 +131,30 @@ namespace ResturantPOS
             constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
 
             conn = new SqlConnection(constr);
+            conn.Open();
         }
         private void btncashOut_Click(object sender, EventArgs e)
         {
+           
             connect();
+            SqlCommand cmd;
+            SqlDataReader drreader;
+            DateTime now = DateTime.Now;
+            
+            String sql = "update calCash set closeAmount = " + Convert.ToDecimal(txtCash.Text) +
+                " , debitAmount = " + Convert.ToDecimal(txtDebit.Text)+
+                 " , creditAmount = " + Convert.ToDecimal(txtCredit.Text) +
+                  " , tipsAmount = " + Convert.ToDecimal(txtTips.Text) +
+                " where " +
+                "added_at='" + now.ToShortDateString() + "'";
+            SqlCommand cmd2 = new SqlCommand(sql, conn);
+           
+            cmd2.ExecuteNonQuery();
+           // MessageBox.Show("Inserted Sucessfully");
+            conn.Close();
+            this.Hide();
+            cashOutReport cr = new cashOutReport();
+            cr.Show();
         }
     }
 }

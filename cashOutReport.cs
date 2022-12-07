@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +11,15 @@ using System.Windows.Forms;
 
 namespace ResturantPOS
 {
-    public partial class CashInDetails : Form
+    public partial class cashOutReport : Form
     {
-        
-        public CashInDetails()
+        public cashOutReport()
         {
             InitializeComponent();
-           
         }
         SqlConnection conn;
         string constr;
-       
+
         public void connect()
         {
             //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
@@ -33,17 +30,8 @@ namespace ResturantPOS
             Console.WriteLine("Connection open");
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void cashOutReport_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            ManagerHomePage mpage = new ManagerHomePage();
-            mpage.Show();
-           // form1.Show();
-        }
-
-        private void CashInDetails_Load(object sender, EventArgs e)
-        {
-            
             connect();
 
             SqlCommand cmd;
@@ -56,15 +44,27 @@ namespace ResturantPOS
             int nu = 1;
             while (drreader.Read())
             {
-                txtDate.Text = drreader.GetValue(2).ToString();
-                txtCash.Text = drreader.GetValue(0).ToString();
+                lbldate.Text = drreader.GetValue(2).ToString();
+                lblobal.Text = drreader.GetValue(0).ToString();
+                lblcbal.Text = drreader.GetValue(1).ToString();
+
+                decimal sale = Convert.ToDecimal(lblcbal.Text) - Convert.ToDecimal(lblobal.Text);
+                lblcashsale.Text = sale.ToString();
+                lbldebitsale.Text = drreader.GetValue(3).ToString();
+                lblcreditsale.Text = drreader.GetValue(4).ToString();
+                lbltip.Text = drreader.GetValue(5).ToString();
+                decimal totalsale = Convert.ToDecimal(lblcashsale.Text) + Convert.ToDecimal(lbldebitsale.Text)
+                    + Convert.ToDecimal(lblcreditsale.Text) + Convert.ToDecimal(lbltip.Text);
+                txtTotalSale.Text = totalsale.ToString();
             }
             conn.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            ManagerHomePage mpage = new ManagerHomePage();
+            mpage.Show();
         }
     }
 }
