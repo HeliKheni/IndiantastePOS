@@ -24,7 +24,7 @@ namespace ResturantPOS
             InitializeComponent();
             cashOut = new cashOut();
             cashIn = new Form1();
-            menu = new Menu();
+           
             form2= new Employee();
             form2= new Employee();
             adminHomePage = new AdminHomePage();
@@ -121,7 +121,7 @@ namespace ResturantPOS
 
         private void btnNumOK_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
+           
             
            if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
             {

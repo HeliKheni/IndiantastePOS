@@ -18,17 +18,30 @@ namespace ResturantPOS
         static SqlConnection conn;
         public  int qty = 0;
         public decimal price = 0;
-        public Menu()
+        public orderOpetions orderOpetions;
+        public String data = "";
+        public List<String> item_names = new List<String>();
+        public Menu(orderOpetions op,String data)
         {
             InitializeComponent();
+            orderOpetions = new orderOpetions();
+            //listBox1.Items.Add(orderOpetions.Tag);
+            this.data = data;
+            //listBox1.Items.Add(data);
+            foreach(String d in data.Split(','))
+            {
+                listBox1.Items.Add(d);
+            };
+            listBox1.Items.Add("-------------------");
         }
         
 
         private void btnHome_Click(object sender, EventArgs e)
+
         {
-            EmployeeHomePage emp = new EmployeeHomePage();
+            
             this.Hide();
-            emp.Show();
+            orderOpetions.Show();
         }
         public void Connect()
         {
@@ -93,11 +106,12 @@ namespace ResturantPOS
 
             conn.Close();
         }
+        decimal finalprice;
         private void dynamicButton_Click(object sender, EventArgs e)
         {
-            string tr = this.Tag.ToString();
+           // string tr = this.Tag.ToString();
             
-            listBox1.Items.Add(tr);
+            //listBox1.Items.Add(tr);
 
             listBox2.Items.Clear();
             Button button = sender as Button;
@@ -109,6 +123,9 @@ namespace ResturantPOS
             sql2 = "select Price from Menu where item_name='" + button.Text + "'";
             cmd2 = new SqlCommand(sql2, conn);
             drreader2 = cmd2.ExecuteReader();
+
+            item_names.Add(button.Text);
+
             while (drreader2.Read())
             {
                 price += Convert.ToDecimal(drreader2.GetValue(0).ToString());
@@ -118,7 +135,7 @@ namespace ResturantPOS
                 listBox2.Items.Add("Total: " + price +"$");
                 listBox2.Items.Add("Qty: " + qty);
                 decimal tax= ((price * 13) / 100);
-                decimal finalprice = price + tax;
+                finalprice = price + tax;
                 listBox2.Items.Add("Tax: " + tax +"$");
                 listBox2.Items.Add("Final Amount: " + finalprice+"$");
             }
@@ -148,5 +165,73 @@ namespace ResturantPOS
             Connect();
             selectByType("Dessert");
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+        }
+
+        private void btnCan_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+        }
+
+        private void btnDebit_Click(object sender, EventArgs e)
+        {
+            addOrderData("Debit");
+        }
+        private void btnCredit_Click(object sender, EventArgs e)
+        {
+            addOrderData("Credit");
+        }
+        private void btnCash_Click(object sender, EventArgs e)
+        {
+            addOrderData("Cash");
+        }
+        public void addOrderData(String type)
+        {
+            //Adding data in Order table
+            Connect();
+            SqlCommand cmd2 = new SqlCommand("INSERT orders "
+            + "(Qty,TotalAmt,paidBy,orderType) " + "VALUES (@qty,@totalamt,@paidby,@type)", conn);
+            cmd2.Parameters.AddWithValue("qty", qty);
+            cmd2.Parameters.AddWithValue("totalamt", finalprice);
+            cmd2.Parameters.AddWithValue("paidby", type);
+            cmd2.Parameters.AddWithValue("type", data);
+            cmd2.ExecuteNonQuery();
+            MessageBox.Show("Order data added Sucessfully");
+            conn.Close();
+
+            //Getting Orderid of last added record in order table
+            Connect();
+            int orderid;
+            String sql3 = "select @@identity";
+            SqlCommand cmd3 = new SqlCommand(sql3, conn);
+            SqlDataReader drreader3 = cmd3.ExecuteReader();
+            while (drreader3.Read())
+            {
+                orderid = Convert.ToInt32(drreader3.GetValue(0).ToString());
+            }
+            conn.Close();
+
+            //Adding data in orderItem table
+            SqlCommand cmd4 = new SqlCommand("INSERT orders "
+            + "(Qty,TotalAmt,paidBy,orderType) " + "VALUES (@qty,@totalamt,@paidby,@type)", conn);
+            cmd3.Parameters.AddWithValue("qty", qty);
+            cmd3.Parameters.AddWithValue("totalamt", finalprice);
+            cmd3.Parameters.AddWithValue("paidby", type);
+            cmd3.Parameters.AddWithValue("type", data);
+            cmd3.ExecuteNonQuery();
+            MessageBox.Show("Order data added Sucessfully");
+            conn.Close();
+
+        }
+        
     }
 }

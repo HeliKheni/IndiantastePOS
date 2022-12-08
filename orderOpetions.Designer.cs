@@ -40,13 +40,16 @@
             this.button8 = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtno = new System.Windows.Forms.TextBox();
+            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // radDineIN
             // 
             this.radDineIN.AutoSize = true;
+            this.radDineIN.Checked = true;
             this.radDineIN.Location = new System.Drawing.Point(86, 47);
             this.radDineIN.Name = "radDineIN";
             this.radDineIN.Size = new System.Drawing.Size(77, 24);
@@ -63,7 +66,6 @@
             this.radTakeOut.Name = "radTakeOut";
             this.radTakeOut.Size = new System.Drawing.Size(87, 24);
             this.radTakeOut.TabIndex = 1;
-            this.radTakeOut.TabStop = true;
             this.radTakeOut.Text = "Take Out";
             this.radTakeOut.UseVisualStyleBackColor = true;
             this.radTakeOut.CheckedChanged += new System.EventHandler(this.radTakeOut_CheckedChanged);
@@ -161,35 +163,58 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 116);
+            this.label1.Location = new System.Drawing.Point(76, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "label1";
+            this.label1.Text = "Name";
+            this.label1.Visible = false;
             // 
-            // textBox1
+            // txtname
             // 
-            this.textBox1.Location = new System.Drawing.Point(203, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 12;
+            this.txtname.Location = new System.Drawing.Point(190, 161);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(169, 27);
+            this.txtname.TabIndex = 12;
+            this.txtname.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 181);
+            this.label2.Location = new System.Drawing.Point(76, 258);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 13;
-            this.label2.Text = "label2";
+            this.label2.Text = "Contact No";
+            this.label2.Visible = false;
+            // 
+            // txtno
+            // 
+            this.txtno.Location = new System.Drawing.Point(190, 257);
+            this.txtno.Name = "txtno";
+            this.txtno.Size = new System.Drawing.Size(169, 27);
+            this.txtno.TabIndex = 14;
+            this.txtno.Visible = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(265, 413);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(94, 35);
+            this.btnHome.TabIndex = 15;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // orderOpetions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 494);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.txtno);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.button8);
@@ -223,7 +248,9 @@
         private Button button8;
         private Button btnMenu;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtname;
         private Label label2;
+        private TextBox txtno;
+        private Button btnHome;
     }
 }

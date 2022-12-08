@@ -12,6 +12,7 @@ namespace ResturantPOS
 {
     public partial class orderOpetions : Form
     {
+        public String data = "";
        
         public orderOpetions()
         {
@@ -20,11 +21,7 @@ namespace ResturantPOS
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if(radDineIN.Checked == false || radTakeOut.Checked == false)
-            {
-                MessageBox.Show("Please select any option");
-            }
-            else if(radDineIN.Checked)
+             if(radDineIN.Checked)
             {
                 if(table == 0)
                 {
@@ -33,12 +30,31 @@ namespace ResturantPOS
                 else 
                 {
                     MessageBox.Show("Table " + table + " is open");
-                    Menu menupage = new Menu();
-                    menupage.Tag = "Table: "+table;
+                    
+                    data = "Table: "+table;
+                    Menu menupage = new Menu(this,data);
+                  
                     menupage.Show();
                     this.Close();
                 }
                 
+            }
+            else if(radTakeOut.Checked)
+            {
+                if(txtname.Text == "" || txtno.Text == "")
+                {
+                    MessageBox.Show("Add Name and Number of customer");
+                }
+                else
+                {
+                    MessageBox.Show("Takeout order for  " + txtname.Text + " is open");
+                    
+                    data = "Takeout, Cu name: " + txtname.Text + ",Contact No: " + txtno.Text;
+                    //this.Tag = data;
+                   Menu menupage = new Menu(this,data);
+                    menupage.Show();
+                    this.Close();
+                }
             }
         }
         int table;
@@ -92,7 +108,10 @@ namespace ResturantPOS
             button6.Visible = true;    
             button7.Visible = true;
             button8.Visible = true;
-
+            label1.Visible = false;
+            label2.Visible = false;
+            txtname.Visible = false;
+            txtno.Visible = false;
         }
 
         private void radTakeOut_CheckedChanged(object sender, EventArgs e)
@@ -105,6 +124,17 @@ namespace ResturantPOS
             button6.Visible = false;
             button7.Visible = false;
             button8.Visible = false;
+            label1.Visible = true;
+            label2.Visible = true;
+            txtname.Visible = true;
+            txtno.Visible = true;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            EmployeeHomePage hm = new EmployeeHomePage();
+            hm.Show();
+            this.Hide();
         }
     }
 }

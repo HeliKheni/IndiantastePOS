@@ -56,3 +56,21 @@ debitAmount money default 0,
 creditAmount money default 0,
 tipsAmount money default 0
 )
+
+create table orders(
+	OrderId int IDENTITY(1,1) primary key,
+	AddedAt datetime Default GETDATE(),
+	Qty int,
+	TotalAmt money,
+	paidBy varchar(10),
+	orderType varchar(20)
+);
+
+create table OrderItems(
+	OrderItemId int IDENTITY(1,1) primary key,
+	product_name varchar(100),
+	price money,
+	orderId int
+	CONSTRAINT FK_Orderid_order FOREIGN KEY (OrderId)
+		REFERENCES orders(OrderId)
+);

@@ -44,13 +44,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnCuName = new System.Windows.Forms.Button();
             this.btnRecall = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCash = new System.Windows.Forms.Button();
+            this.btnCredit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCan = new System.Windows.Forms.Button();
+            this.btnDebit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -160,6 +166,7 @@
             this.btnPay.TabIndex = 23;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // button21
             // 
@@ -213,40 +220,12 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnRecall);
-            this.panel2.Controls.Add(this.btnCuName);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(229, 467);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(485, 73);
             this.panel2.TabIndex = 28;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(167, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Modifiers";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(283, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Void";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnCuName
-            // 
-            this.btnCuName.Location = new System.Drawing.Point(14, 16);
-            this.btnCuName.Name = "btnCuName";
-            this.btnCuName.Size = new System.Drawing.Size(124, 40);
-            this.btnCuName.TabIndex = 2;
-            this.btnCuName.Text = "Customer Name";
-            this.btnCuName.UseVisualStyleBackColor = true;
             // 
             // btnRecall
             // 
@@ -257,11 +236,96 @@
             this.btnRecall.Text = "Recall";
             this.btnRecall.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(283, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Void";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(167, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 40);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Modifiers";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnCash);
+            this.panel3.Controls.Add(this.btnCredit);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btnCan);
+            this.panel3.Controls.Add(this.btnDebit);
+            this.panel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel3.Location = new System.Drawing.Point(4, 15);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(710, 535);
+            this.panel3.TabIndex = 29;
+            this.panel3.Visible = false;
+            // 
+            // btnCash
+            // 
+            this.btnCash.Location = new System.Drawing.Point(493, 263);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(110, 47);
+            this.btnCash.TabIndex = 4;
+            this.btnCash.Text = "Cash";
+            this.btnCash.UseVisualStyleBackColor = true;
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
+            // 
+            // btnCredit
+            // 
+            this.btnCredit.Location = new System.Drawing.Point(296, 265);
+            this.btnCredit.Name = "btnCredit";
+            this.btnCredit.Size = new System.Drawing.Size(115, 45);
+            this.btnCredit.TabIndex = 3;
+            this.btnCredit.Text = "Credit";
+            this.btnCredit.UseVisualStyleBackColor = true;
+            this.btnCredit.Click += new System.EventHandler(this.btnCredit_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(272, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 37);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Pay option ";
+            // 
+            // btnCan
+            // 
+            this.btnCan.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCan.Location = new System.Drawing.Point(51, 24);
+            this.btnCan.Name = "btnCan";
+            this.btnCan.Size = new System.Drawing.Size(114, 50);
+            this.btnCan.TabIndex = 1;
+            this.btnCan.Text = "Cancel";
+            this.btnCan.UseVisualStyleBackColor = false;
+            this.btnCan.Click += new System.EventHandler(this.btnCan_Click);
+            // 
+            // btnDebit
+            // 
+            this.btnDebit.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDebit.Location = new System.Drawing.Point(94, 274);
+            this.btnDebit.Name = "btnDebit";
+            this.btnDebit.Size = new System.Drawing.Size(110, 45);
+            this.btnDebit.TabIndex = 0;
+            this.btnDebit.Text = "Debit";
+            this.btnDebit.UseVisualStyleBackColor = true;
+            this.btnDebit.Click += new System.EventHandler(this.btnDebit_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 561);
+            this.ClientSize = new System.Drawing.Size(1054, 567);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.panel1);
@@ -281,9 +345,12 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +375,11 @@
         private Button button2;
         private Button button1;
         private Button btnRecall;
-        private Button btnCuName;
+        private Panel panel3;
+        private Button btnCan;
+        private Button btnDebit;
+        private Button btnCash;
+        private Button btnCredit;
+        private Label label1;
     }
 }

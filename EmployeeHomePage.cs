@@ -30,9 +30,9 @@ namespace ResturantPOS
 
         private void btnDineIn_Click(object sender, EventArgs e)
         {
-            Menu menupage = new Menu();
+            orderOpetions op = new orderOpetions();
             this.Hide();
-            menupage.Show();
+            op.Show();
         }
 
         private void btnOrderHistory_Click(object sender, EventArgs e)
