@@ -45,8 +45,6 @@ create table Employee
 	hours float
 );
 
-
-
 create table calCash
 (
 openAmount money,
@@ -63,14 +61,16 @@ create table orders(
 	Qty int,
 	TotalAmt money,
 	paidBy varchar(10),
-	orderType varchar(20)
+	orderType varchar(100)
 );
 
 create table OrderItems(
 	OrderItemId int IDENTITY(1,1) primary key,
-	product_name varchar(100),
-	price money,
+	itemId int,
 	orderId int
 	CONSTRAINT FK_Orderid_order FOREIGN KEY (OrderId)
-		REFERENCES orders(OrderId)
+		REFERENCES orders(OrderId),
+	CONSTRAINT FK_itemid_menu FOREIGN KEY (itemId)
+		REFERENCES Menu(item_Id)
 );
+
