@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,13 +20,44 @@ namespace ResturantPOS
         {
             InitializeComponent();
             this.managerHomePage = managerHomePage;
+            txtDebit.Text = displaySum("Debit").ToString();
+            txtCredit.Text = displaySum("Credit").ToString();
         }
 
         public cashOut()
         {
             InitializeComponent();
-        }
+            txtDebit.Text = displaySum("Debit").ToString();
+            txtCredit.Text = displaySum("Credit").ToString();
 
+        }
+        public double displaySum(String type)
+        {
+            connect();
+            SqlCommand cmd;
+            SqlDataReader drreader;
+            String sql, output = "";
+            DateTime now = DateTime.Now;
+            sql = "select sum(TotalAmt) from orders where AddedAt='" + now.ToShortDateString() + "'" +
+                " and paidBy='"+type+"'";
+            cmd = new SqlCommand(sql, conn);
+            drreader = cmd.ExecuteReader();
+            double amt = 0;
+            if(drreader.Read())
+            {
+                amt = Convert.ToDouble(drreader.GetValue(0).ToString());
+                return amt;
+               /* if (Regex.Match(drreader.GetValue(0).ToString(), "^[0-9]*$").Success)
+                {
+                    amt = Convert.ToDouble(drreader.GetValue(0).ToString());
+                    return amt;
+                }*/
+            }
+            return amt;
+            
+            conn.Close();
+            
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -35,28 +67,44 @@ namespace ResturantPOS
         {
             decimal totalcash = 0;
             decimal cash=0, credit=0, debit=0, tips=0;
-            if(IsNull(txtCash) && IsDecimal(txtCash) && IsWithinRange(txtDebit, 0, 10000))
+            if(IsNull(txtCash) && IsDecimal(txtCash) && IsWithinRange(txtDebit, 0))
             {
-                 cash = Convert.ToDecimal(txtCash.Text);
-              //  cash += cash * 1;
+                cash = Convert.ToDecimal(txtCash.Text);
+                connect();
+
+                SqlCommand cmd;
+                SqlDataReader drreader;
+                String sql, output = "";
+                DateTime now = DateTime.Now;
+                sql = "select openAmount from calCash where added_at='" + now.ToShortDateString() + "'";
+                cmd = new SqlCommand(sql, conn);
+                drreader = cmd.ExecuteReader();
+                decimal amt = 0;
+                while (drreader.Read())
+                {
+                    amt = Convert.ToDecimal(drreader.GetValue(0).ToString());
+                }
+                conn.Close();
+                if(cash < amt)
+                {
+                    MessageBox.Show("Sorry! Your Cashout cash is less than opening amount");
+                }
+                else
+                {
+                    credit = Convert.ToDecimal(txtCredit.Text);
+                    debit = Convert.ToDecimal(txtDebit.Text);
+                    if (IsNull(txtTips) && IsDecimal(txtTips) && IsWithinRange(txtTips, 0))
+                    {
+                        tips = Convert.ToDecimal(txtTips.Text);
+                        totalcash = cash + credit + tips + debit;
+                        txtTotalCashout.Text = totalcash.ToString("c2");
+                    }
+                   
+                    
+                }
+               
             }
-            if (IsNull(txtCredit) && IsDecimal(txtCredit) && IsWithinRange(txtCredit, 0, 10000))
-            {
-                 credit = Convert.ToDecimal(txtCredit.Text);
-              //  credit += credit * 1;
-            }
-            if (IsNull(txtDebit) && IsDecimal(txtDebit) && IsWithinRange(txtDebit, 0, 10000))
-            {
-                 debit = Convert.ToDecimal(txtDebit.Text);
-                //debit += debit * 1;
-            }
-            if (IsNull(txtTips) && IsDecimal(txtTips) && IsWithinRange(txtTips, 0, 10000))
-            {
-                 tips = Convert.ToDecimal(txtTips.Text);
-               // tips += tips * 1;
-            }
-            totalcash = cash + credit + tips + debit;
-            txtTotalCashout.Text = totalcash.ToString("c2");
+            
         }
         private bool IsDecimal(TextBox textBox)
         {
@@ -75,7 +123,7 @@ namespace ResturantPOS
         {
             if (textbox.Text == "")
             {
-                MessageBox.Show(" All values for subtotal is required! ", "Error");
+                MessageBox.Show(" All values are required! ", "Error");
                 textbox.Focus();
                 return false;
             }
@@ -83,15 +131,14 @@ namespace ResturantPOS
                 return true;
 
         }
-        private bool IsWithinRange(TextBox textbox, int min, int max)
+        private bool IsWithinRange(TextBox textbox, int min)
         {
-            //int value = Convert.ToInt32(textbox.Text);
             decimal value = Convert.ToDecimal(textbox.Text);
-            if (value >= min && value <= max)
+            if (value >= min)
                 return true;
             else
             {
-                MessageBox.Show(" All Values for subtotal must be positivie");
+                MessageBox.Show(" All Values must be positivie");
                 return false;
             }
 
@@ -135,26 +182,33 @@ namespace ResturantPOS
         }
         private void btncashOut_Click(object sender, EventArgs e)
         {
+            if(txtTotalCashout.Text == "")
+            {
+                MessageBox.Show("Please Do total first");
+            }
+            else
+            {
+                connect();
+                SqlCommand cmd;
+                SqlDataReader drreader;
+                DateTime now = DateTime.Now;
+
+                String sql = "update calCash set closeAmount = " + Convert.ToDecimal(txtCash.Text) +
+                    " , debitAmount = " + Convert.ToDecimal(txtDebit.Text) +
+                     " , creditAmount = " + Convert.ToDecimal(txtCredit.Text) +
+                      " , tipsAmount = " + Convert.ToDecimal(txtTips.Text) +
+                    " where " +
+                    "added_at='" + now.ToShortDateString() + "'";
+                SqlCommand cmd2 = new SqlCommand(sql, conn);
+
+                cmd2.ExecuteNonQuery();
+                // MessageBox.Show("Inserted Sucessfully");
+                conn.Close();
+                this.Hide();
+                cashOutReport cr = new cashOutReport();
+                cr.Show();
+            }
            
-            connect();
-            SqlCommand cmd;
-            SqlDataReader drreader;
-            DateTime now = DateTime.Now;
-            
-            String sql = "update calCash set closeAmount = " + Convert.ToDecimal(txtCash.Text) +
-                " , debitAmount = " + Convert.ToDecimal(txtDebit.Text)+
-                 " , creditAmount = " + Convert.ToDecimal(txtCredit.Text) +
-                  " , tipsAmount = " + Convert.ToDecimal(txtTips.Text) +
-                " where " +
-                "added_at='" + now.ToShortDateString() + "'";
-            SqlCommand cmd2 = new SqlCommand(sql, conn);
-           
-            cmd2.ExecuteNonQuery();
-           // MessageBox.Show("Inserted Sucessfully");
-            conn.Close();
-            this.Hide();
-            cashOutReport cr = new cashOutReport();
-            cr.Show();
         }
     }
 }

@@ -55,10 +55,10 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(151, 21);
+            this.label1.Location = new System.Drawing.Point(121, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 60);
+            this.label1.Size = new System.Drawing.Size(403, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to IndianTaste";
             // 
@@ -66,10 +66,10 @@
             // 
             this.btnLoginIn.BackColor = System.Drawing.Color.IndianRed;
             this.btnLoginIn.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLoginIn.Location = new System.Drawing.Point(177, 185);
+            this.btnLoginIn.Location = new System.Drawing.Point(142, 148);
             this.btnLoginIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoginIn.Name = "btnLoginIn";
-            this.btnLoginIn.Size = new System.Drawing.Size(137, 53);
+            this.btnLoginIn.Size = new System.Drawing.Size(110, 42);
             this.btnLoginIn.TabIndex = 1;
             this.btnLoginIn.Text = "LOG IN";
             this.btnLoginIn.UseVisualStyleBackColor = false;
@@ -80,9 +80,10 @@
             this.radAdmin.AutoSize = true;
             this.radAdmin.BackColor = System.Drawing.Color.Fuchsia;
             this.radAdmin.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radAdmin.Location = new System.Drawing.Point(421, 151);
+            this.radAdmin.Location = new System.Drawing.Point(337, 121);
+            this.radAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radAdmin.Name = "radAdmin";
-            this.radAdmin.Size = new System.Drawing.Size(116, 35);
+            this.radAdmin.Size = new System.Drawing.Size(95, 30);
             this.radAdmin.TabIndex = 2;
             this.radAdmin.TabStop = true;
             this.radAdmin.Text = "Admin";
@@ -93,9 +94,10 @@
             this.radManager.AutoSize = true;
             this.radManager.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.radManager.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radManager.Location = new System.Drawing.Point(421, 203);
+            this.radManager.Location = new System.Drawing.Point(337, 162);
+            this.radManager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radManager.Name = "radManager";
-            this.radManager.Size = new System.Drawing.Size(147, 35);
+            this.radManager.Size = new System.Drawing.Size(120, 30);
             this.radManager.TabIndex = 3;
             this.radManager.TabStop = true;
             this.radManager.Text = "Manager";
@@ -106,9 +108,10 @@
             this.radEmployee.AutoSize = true;
             this.radEmployee.BackColor = System.Drawing.Color.SandyBrown;
             this.radEmployee.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radEmployee.Location = new System.Drawing.Point(421, 265);
+            this.radEmployee.Location = new System.Drawing.Point(337, 212);
+            this.radEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radEmployee.Name = "radEmployee";
-            this.radEmployee.Size = new System.Drawing.Size(156, 35);
+            this.radEmployee.Size = new System.Drawing.Size(126, 30);
             this.radEmployee.TabIndex = 4;
             this.radEmployee.TabStop = true;
             this.radEmployee.Text = "Employee";
@@ -116,17 +119,20 @@
             // 
             // txtNumInput
             // 
-            this.txtNumInput.Location = new System.Drawing.Point(678, 155);
+            this.txtNumInput.Location = new System.Drawing.Point(542, 124);
+            this.txtNumInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumInput.Name = "txtNumInput";
-            this.txtNumInput.Size = new System.Drawing.Size(257, 31);
+            this.txtNumInput.ReadOnly = true;
+            this.txtNumInput.Size = new System.Drawing.Size(206, 27);
             this.txtNumInput.TabIndex = 5;
             // 
             // btnNum1
             // 
             this.btnNum1.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnNum1.Location = new System.Drawing.Point(678, 203);
+            this.btnNum1.Location = new System.Drawing.Point(542, 162);
+            this.btnNum1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum1.Name = "btnNum1";
-            this.btnNum1.Size = new System.Drawing.Size(66, 48);
+            this.btnNum1.Size = new System.Drawing.Size(53, 38);
             this.btnNum1.TabIndex = 6;
             this.btnNum1.Text = "1";
             this.btnNum1.UseVisualStyleBackColor = false;
@@ -134,9 +140,10 @@
             // 
             // btnNum2
             // 
-            this.btnNum2.Location = new System.Drawing.Point(772, 203);
+            this.btnNum2.Location = new System.Drawing.Point(618, 162);
+            this.btnNum2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum2.Name = "btnNum2";
-            this.btnNum2.Size = new System.Drawing.Size(66, 48);
+            this.btnNum2.Size = new System.Drawing.Size(53, 38);
             this.btnNum2.TabIndex = 7;
             this.btnNum2.Text = "2";
             this.btnNum2.UseVisualStyleBackColor = true;
@@ -144,9 +151,10 @@
             // 
             // btnNum3
             // 
-            this.btnNum3.Location = new System.Drawing.Point(869, 203);
+            this.btnNum3.Location = new System.Drawing.Point(695, 162);
+            this.btnNum3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum3.Name = "btnNum3";
-            this.btnNum3.Size = new System.Drawing.Size(66, 48);
+            this.btnNum3.Size = new System.Drawing.Size(53, 38);
             this.btnNum3.TabIndex = 8;
             this.btnNum3.Text = "3";
             this.btnNum3.UseVisualStyleBackColor = true;
@@ -154,9 +162,10 @@
             // 
             // btnNum4
             // 
-            this.btnNum4.Location = new System.Drawing.Point(678, 265);
+            this.btnNum4.Location = new System.Drawing.Point(542, 212);
+            this.btnNum4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum4.Name = "btnNum4";
-            this.btnNum4.Size = new System.Drawing.Size(66, 48);
+            this.btnNum4.Size = new System.Drawing.Size(53, 38);
             this.btnNum4.TabIndex = 9;
             this.btnNum4.Text = "4";
             this.btnNum4.UseVisualStyleBackColor = true;
@@ -164,9 +173,10 @@
             // 
             // btnNum5
             // 
-            this.btnNum5.Location = new System.Drawing.Point(772, 265);
+            this.btnNum5.Location = new System.Drawing.Point(618, 212);
+            this.btnNum5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum5.Name = "btnNum5";
-            this.btnNum5.Size = new System.Drawing.Size(66, 48);
+            this.btnNum5.Size = new System.Drawing.Size(53, 38);
             this.btnNum5.TabIndex = 10;
             this.btnNum5.Text = "5";
             this.btnNum5.UseVisualStyleBackColor = true;
@@ -174,9 +184,10 @@
             // 
             // btnNum6
             // 
-            this.btnNum6.Location = new System.Drawing.Point(869, 265);
+            this.btnNum6.Location = new System.Drawing.Point(695, 212);
+            this.btnNum6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum6.Name = "btnNum6";
-            this.btnNum6.Size = new System.Drawing.Size(66, 48);
+            this.btnNum6.Size = new System.Drawing.Size(53, 38);
             this.btnNum6.TabIndex = 11;
             this.btnNum6.Text = "6";
             this.btnNum6.UseVisualStyleBackColor = true;
@@ -184,9 +195,10 @@
             // 
             // btnNum7
             // 
-            this.btnNum7.Location = new System.Drawing.Point(678, 329);
+            this.btnNum7.Location = new System.Drawing.Point(542, 263);
+            this.btnNum7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum7.Name = "btnNum7";
-            this.btnNum7.Size = new System.Drawing.Size(66, 48);
+            this.btnNum7.Size = new System.Drawing.Size(53, 38);
             this.btnNum7.TabIndex = 12;
             this.btnNum7.Text = "7";
             this.btnNum7.UseVisualStyleBackColor = true;
@@ -194,9 +206,10 @@
             // 
             // btnNum8
             // 
-            this.btnNum8.Location = new System.Drawing.Point(772, 329);
+            this.btnNum8.Location = new System.Drawing.Point(618, 263);
+            this.btnNum8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum8.Name = "btnNum8";
-            this.btnNum8.Size = new System.Drawing.Size(66, 48);
+            this.btnNum8.Size = new System.Drawing.Size(53, 38);
             this.btnNum8.TabIndex = 13;
             this.btnNum8.Text = "8";
             this.btnNum8.UseVisualStyleBackColor = true;
@@ -204,9 +217,10 @@
             // 
             // btnNum9
             // 
-            this.btnNum9.Location = new System.Drawing.Point(869, 329);
+            this.btnNum9.Location = new System.Drawing.Point(695, 263);
+            this.btnNum9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum9.Name = "btnNum9";
-            this.btnNum9.Size = new System.Drawing.Size(66, 48);
+            this.btnNum9.Size = new System.Drawing.Size(53, 38);
             this.btnNum9.TabIndex = 14;
             this.btnNum9.Text = "9";
             this.btnNum9.UseVisualStyleBackColor = true;
@@ -214,9 +228,10 @@
             // 
             // btnNumC
             // 
-            this.btnNumC.Location = new System.Drawing.Point(678, 396);
+            this.btnNumC.Location = new System.Drawing.Point(542, 317);
+            this.btnNumC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNumC.Name = "btnNumC";
-            this.btnNumC.Size = new System.Drawing.Size(66, 48);
+            this.btnNumC.Size = new System.Drawing.Size(53, 38);
             this.btnNumC.TabIndex = 15;
             this.btnNumC.Text = "C";
             this.btnNumC.UseVisualStyleBackColor = true;
@@ -224,18 +239,20 @@
             // 
             // btnNum0
             // 
-            this.btnNum0.Location = new System.Drawing.Point(772, 396);
+            this.btnNum0.Location = new System.Drawing.Point(618, 317);
+            this.btnNum0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNum0.Name = "btnNum0";
-            this.btnNum0.Size = new System.Drawing.Size(66, 48);
+            this.btnNum0.Size = new System.Drawing.Size(53, 38);
             this.btnNum0.TabIndex = 16;
             this.btnNum0.Text = "0";
             this.btnNum0.UseVisualStyleBackColor = true;
             // 
             // btnNumOK
             // 
-            this.btnNumOK.Location = new System.Drawing.Point(869, 396);
+            this.btnNumOK.Location = new System.Drawing.Point(695, 317);
+            this.btnNumOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNumOK.Name = "btnNumOK";
-            this.btnNumOK.Size = new System.Drawing.Size(66, 48);
+            this.btnNumOK.Size = new System.Drawing.Size(53, 38);
             this.btnNumOK.TabIndex = 17;
             this.btnNumOK.Text = "OK";
             this.btnNumOK.UseVisualStyleBackColor = true;
@@ -243,10 +260,10 @@
             // 
             // welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1061, 558);
+            this.ClientSize = new System.Drawing.Size(849, 446);
             this.Controls.Add(this.btnNumOK);
             this.Controls.Add(this.btnNum0);
             this.Controls.Add(this.btnNumC);

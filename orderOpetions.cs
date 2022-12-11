@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,6 +46,9 @@ namespace ResturantPOS
                 {
                     MessageBox.Show("Add Name and Number of customer");
                 }
+                else if (!Regex.Match(txtno.Text, "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$").Success)
+                    MessageBox.Show("Please enter phone number in correct format. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
                 else
                 {
                     MessageBox.Show("Takeout order for  " + txtname.Text + " is open");

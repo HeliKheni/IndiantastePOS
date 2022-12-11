@@ -151,6 +151,7 @@ namespace ResturantPOS
             {
                 MessageBox.Show("Password doesn't Match");
             }
+            txtNumInput.Text = "";
         }
     }
 }

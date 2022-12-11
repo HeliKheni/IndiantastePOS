@@ -57,7 +57,7 @@ tipsAmount money default 0
 
 create table orders(
 	OrderId int IDENTITY(1,1) primary key,
-	AddedAt datetime Default GETDATE(),
+	AddedAt date Default GETDATE(),
 	Qty int,
 	TotalAmt money,
 	paidBy varchar(10),

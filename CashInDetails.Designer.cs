@@ -40,11 +40,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(250, 19);
+            this.label1.BackColor = System.Drawing.Color.Khaki;
+            this.label1.Font = new System.Drawing.Font("Algerian", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(173, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 37);
+            this.label1.Size = new System.Drawing.Size(292, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "CashIn Details";
             // 
@@ -52,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(49, 77);
+            this.label2.Location = new System.Drawing.Point(142, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 32);
@@ -63,7 +64,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(49, 139);
+            this.label3.Location = new System.Drawing.Point(28, 177);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 32);
@@ -72,32 +73,34 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(191, 271);
+            this.button1.Location = new System.Drawing.Point(142, 287);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 42);
+            this.button1.Size = new System.Drawing.Size(124, 56);
             this.button1.TabIndex = 3;
             this.button1.Text = "Print";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Coral;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(358, 271);
+            this.button2.Location = new System.Drawing.Point(330, 283);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
+            this.button2.Size = new System.Drawing.Size(135, 60);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "CANCEL";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtDate
             // 
             this.txtDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDate.Location = new System.Drawing.Point(150, 83);
+            this.txtDate.Location = new System.Drawing.Point(259, 115);
             this.txtDate.Margin = new System.Windows.Forms.Padding(2);
             this.txtDate.Name = "txtDate";
             this.txtDate.ReadOnly = true;
@@ -107,18 +110,18 @@
             // txtCash
             // 
             this.txtCash.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCash.Location = new System.Drawing.Point(277, 139);
+            this.txtCash.Location = new System.Drawing.Point(259, 177);
             this.txtCash.Margin = new System.Windows.Forms.Padding(2);
             this.txtCash.Name = "txtCash";
             this.txtCash.ReadOnly = true;
-            this.txtCash.Size = new System.Drawing.Size(201, 34);
+            this.txtCash.Size = new System.Drawing.Size(234, 34);
             this.txtCash.TabIndex = 6;
             // 
             // CashInDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 360);
+            this.ClientSize = new System.Drawing.Size(680, 441);
             this.Controls.Add(this.txtCash);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.button2);
