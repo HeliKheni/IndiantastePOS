@@ -119,7 +119,8 @@ namespace ResturantPOS
 
         private void btnManageDetails_Click(object sender, EventArgs e)
         {
-            EmployeeHomePage emp = new EmployeeHomePage();
+            //EmployeeHomePage emp = new EmployeeHomePage();
+            Employee emp = new Employee();
             this.Close();
             emp.Show();
         }

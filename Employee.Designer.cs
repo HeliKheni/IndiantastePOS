@@ -47,9 +47,8 @@
             this.btnAddEmp.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddEmp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAddEmp.Location = new System.Drawing.Point(1, 0);
-            this.btnAddEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(102, 45);
+            this.btnAddEmp.Size = new System.Drawing.Size(146, 75);
             this.btnAddEmp.TabIndex = 2;
             this.btnAddEmp.Text = "Add ";
             this.btnAddEmp.UseVisualStyleBackColor = true;
@@ -61,10 +60,9 @@
             this.button2.FlatAppearance.BorderSize = 5;
             this.button2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(107, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(153, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 45);
+            this.button2.Size = new System.Drawing.Size(146, 75);
             this.button2.TabIndex = 4;
             this.button2.Text = "update";
             this.button2.UseVisualStyleBackColor = true;
@@ -76,10 +74,9 @@
             this.button1.FlatAppearance.BorderSize = 5;
             this.button1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(213, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(304, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 45);
+            this.button1.Size = new System.Drawing.Size(146, 75);
             this.button1.TabIndex = 5;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -90,9 +87,10 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSearch.Location = new System.Drawing.Point(335, 18);
+            this.lblSearch.Location = new System.Drawing.Point(479, 30);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(64, 15);
+            this.lblSearch.Size = new System.Drawing.Size(97, 25);
             this.lblSearch.TabIndex = 6;
             this.lblSearch.Text = "Search By";
             // 
@@ -105,26 +103,30 @@
             "Email",
             "Phone",
             "Hours"});
-            this.Combosearch.Location = new System.Drawing.Point(405, 15);
+            this.Combosearch.Location = new System.Drawing.Point(579, 25);
+            this.Combosearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Combosearch.Name = "Combosearch";
-            this.Combosearch.Size = new System.Drawing.Size(107, 23);
+            this.Combosearch.Size = new System.Drawing.Size(151, 33);
             this.Combosearch.TabIndex = 7;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(518, 15);
+            this.txtSearch.Location = new System.Drawing.Point(740, 25);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 23);
+            this.txtSearch.Size = new System.Drawing.Size(141, 31);
             this.txtSearch.TabIndex = 8;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(105, 107);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 258);
+            this.dataGridView1.Size = new System.Drawing.Size(824, 430);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
@@ -134,10 +136,9 @@
             this.button3.FlatAppearance.BorderSize = 5;
             this.button3.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(634, 3);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(906, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 45);
+            this.button3.Size = new System.Drawing.Size(146, 75);
             this.button3.TabIndex = 10;
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
@@ -145,10 +146,10 @@
             // 
             // Employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(747, 421);
+            this.ClientSize = new System.Drawing.Size(1067, 702);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtSearch);
@@ -158,8 +159,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAddEmp);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Employee";
-            this.Text = "Form2";
+            this.Text = "Employee Details";
             this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

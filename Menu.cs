@@ -45,8 +45,8 @@ namespace ResturantPOS
         }
         public void Connect()
         {
-            //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
-            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
+            //constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
             conn = new SqlConnection(constr);
             conn.Open();
             Console.WriteLine("Connection open");
@@ -138,6 +138,7 @@ namespace ResturantPOS
             finalprice = price + tax;
             listBox2.Items.Add("Tax: " + tax + "$");
             listBox2.Items.Add("Final Amount: " + finalprice + "$");
+           
         }
 
         private void btnVeg_Click(object sender, EventArgs e)
