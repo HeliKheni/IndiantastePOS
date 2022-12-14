@@ -76,7 +76,7 @@ namespace ResturantPOS
                 Label dat = new Label();
                 dat.Location = new System.Drawing.Point(x, y);
                 dat.Text = itemid;
-                dat.Size = new System.Drawing.Size(100, 30);
+                dat.Size = new System.Drawing.Size(100, 35);
               
                 Controls.Add(dat);
 
@@ -100,12 +100,12 @@ namespace ResturantPOS
                     Label dat2 = new Label();
                     dat2.Location = new System.Drawing.Point(x + 150, y);
                     dat2.Text = " " + itemname;
-                    dat2.Size = new System.Drawing.Size(200, 30);
+                    dat2.Size = new System.Drawing.Size(200, 35);
 
                     Label dat3 = new Label();
                     dat3.Location = new System.Drawing.Point(x + 400, y);
                     dat3.Text = " " + price;
-                    dat3.Size = new System.Drawing.Size(100, 30);
+                    dat3.Size = new System.Drawing.Size(100, 35);
                     Controls.Add(dat2);
                     Controls.Add(dat3);
                 }

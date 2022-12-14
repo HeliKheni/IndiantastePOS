@@ -74,7 +74,7 @@
             // btnHome
             // 
             this.btnHome.AutoEllipsis = true;
-            this.btnHome.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnHome.BackColor = System.Drawing.Color.Coral;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnHome.FlatAppearance.BorderSize = 2;
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -227,7 +227,7 @@
             this.panelPay.Controls.Add(this.btnCan);
             this.panelPay.Controls.Add(this.btnDebit);
             this.panelPay.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panelPay.Location = new System.Drawing.Point(12, 12);
+            this.panelPay.Location = new System.Drawing.Point(12, 20);
             this.panelPay.Name = "panelPay";
             this.panelPay.Size = new System.Drawing.Size(710, 455);
             this.panelPay.TabIndex = 29;
@@ -318,7 +318,7 @@
             this.panelVoid.Controls.Add(this.btnVoidItem);
             this.panelVoid.Controls.Add(this.listBox3);
             this.panelVoid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panelVoid.Location = new System.Drawing.Point(6, 4);
+            this.panelVoid.Location = new System.Drawing.Point(6, 12);
             this.panelVoid.Name = "panelVoid";
             this.panelVoid.Size = new System.Drawing.Size(1036, 551);
             this.panelVoid.TabIndex = 2;

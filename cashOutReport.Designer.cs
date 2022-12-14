@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Khaki;
             this.label1.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(84, 29);
+            this.label1.Location = new System.Drawing.Point(52, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 34);
@@ -101,21 +100,10 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Today\'s Cash Sale";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Location = new System.Drawing.Point(58, 519);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Print";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.Coral;
-            this.btnHome.Location = new System.Drawing.Point(278, 519);
+            this.btnHome.Location = new System.Drawing.Point(125, 523);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(170, 44);
@@ -252,7 +240,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -275,7 +262,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Button button1;
         private Button btnHome;
         private Label label6;
         private Label label7;

@@ -31,7 +31,7 @@ namespace ResturantPOS
             form2= new Employee();
             form2= new Employee();
           
-           managerHomePage = new ManagerHomePage(this);
+            managerHomePage = new ManagerHomePage(this);
             pass = "";
 
             this.BackgroundImage = Properties.Resources.img9;

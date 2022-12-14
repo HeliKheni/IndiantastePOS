@@ -51,7 +51,7 @@ namespace ResturantPOS
             Regex Hoursregex = new Regex(hoursePattern);
             if (txtId.Text == "" || txtName.Text == "" || txtHours.Text == "" || txtPhone.Text == "" || txtEmail.Text == "")
             {
-                MessageBox.Show("textbox must be filled.", "EMPTY", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("All Data are Required! .", "EMPTY", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (!regex.IsMatch(txtId.Text))
             {

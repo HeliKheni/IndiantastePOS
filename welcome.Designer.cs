@@ -251,7 +251,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(849, 446);
+            this.ClientSize = new System.Drawing.Size(914, 512);
             this.Controls.Add(this.btnNumOK);
             this.Controls.Add(this.btnNum0);
             this.Controls.Add(this.btnNumC);
