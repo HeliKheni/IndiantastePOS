@@ -63,16 +63,6 @@ namespace ResturantPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap img4 {
-            get {
-                object obj = ResourceManager.GetObject("img4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap img5 {
             get {
                 object obj = ResourceManager.GetObject("img5", resourceCulture);
@@ -96,6 +86,16 @@ namespace ResturantPOS.Properties {
         internal static System.Drawing.Bitmap img7 {
             get {
                 object obj = ResourceManager.GetObject("img7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img9 {
+            get {
+                object obj = ResourceManager.GetObject("img9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

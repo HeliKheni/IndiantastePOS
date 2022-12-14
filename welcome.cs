@@ -22,6 +22,7 @@ namespace ResturantPOS
         public string pass = "";
         public welcome()
         {
+            
             InitializeComponent();
 
             cashOut = new cashOut();
@@ -33,7 +34,7 @@ namespace ResturantPOS
            managerHomePage = new ManagerHomePage(this);
             pass = "";
 
-            this.BackgroundImage = Properties.Resources.img4;
+            this.BackgroundImage = Properties.Resources.img9;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             
             var timer = new Timer();
@@ -46,10 +47,11 @@ namespace ResturantPOS
         {
             //add image in list from resource file.  
             List<Bitmap> lisimage = new List<Bitmap>();
-            lisimage.Add(Properties.Resources.img4);
+            
             lisimage.Add(Properties.Resources.img5);
             lisimage.Add(Properties.Resources.img6);
             lisimage.Add(Properties.Resources.img7);
+            lisimage.Add(Properties.Resources.img9);
             var indexbackimage = DateTime.Now.Second % lisimage.Count;
             this.BackgroundImage = lisimage[indexbackimage];
         }

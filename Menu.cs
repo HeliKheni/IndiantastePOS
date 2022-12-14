@@ -14,6 +14,7 @@ namespace ResturantPOS
 {
     public partial class Menu : Form
     {
+       
         static string constr = "";
         static SqlConnection conn;
         public  int qty = 0;
@@ -23,6 +24,7 @@ namespace ResturantPOS
         public List<int> item_id = new List<int>();
         public Menu(orderOpetions op,String data)
         {
+            btnBack.BackColor = Color.Coral;
             InitializeComponent();
             orderOpetions = new orderOpetions();
             //listBox1.Items.Add(orderOpetions.Tag);
@@ -86,7 +88,7 @@ namespace ResturantPOS
                 //dynamicButton.AutoSize = true;
                 dynamicButton.Width = 150;
                 dynamicButton.Height = 40;
-                dynamicButton.BackColor = Color.HotPink;
+                dynamicButton.BackColor = Color.PaleGreen;
 
                 // Add a Button Click Event handler
                 dynamicButton.Click += new EventHandler(dynamicButton_Click);

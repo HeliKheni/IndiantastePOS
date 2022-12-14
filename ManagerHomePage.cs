@@ -133,5 +133,10 @@ namespace ResturantPOS
             janki j = new janki();
             j.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

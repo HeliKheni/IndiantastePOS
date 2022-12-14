@@ -227,7 +227,7 @@
             this.panelPay.Controls.Add(this.btnCan);
             this.panelPay.Controls.Add(this.btnDebit);
             this.panelPay.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panelPay.Location = new System.Drawing.Point(6, 40);
+            this.panelPay.Location = new System.Drawing.Point(12, 12);
             this.panelPay.Name = "panelPay";
             this.panelPay.Size = new System.Drawing.Size(710, 455);
             this.panelPay.TabIndex = 29;
@@ -291,6 +291,7 @@
             // pael1
             // 
             this.pael1.BackColor = System.Drawing.Color.LightGray;
+            this.pael1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pael1.Location = new System.Drawing.Point(228, 12);
             this.pael1.Name = "pael1";
             this.pael1.Size = new System.Drawing.Size(486, 520);
@@ -317,7 +318,7 @@
             this.panelVoid.Controls.Add(this.btnVoidItem);
             this.panelVoid.Controls.Add(this.listBox3);
             this.panelVoid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panelVoid.Location = new System.Drawing.Point(6, 11);
+            this.panelVoid.Location = new System.Drawing.Point(6, 4);
             this.panelVoid.Name = "panelVoid";
             this.panelVoid.Size = new System.Drawing.Size(1036, 551);
             this.panelVoid.TabIndex = 2;

@@ -52,7 +52,7 @@
             this.radDineIN.Checked = true;
             this.radDineIN.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radDineIN.Location = new System.Drawing.Point(151, 54);
-            this.radDineIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radDineIN.Margin = new System.Windows.Forms.Padding(4);
             this.radDineIN.Name = "radDineIN";
             this.radDineIN.Size = new System.Drawing.Size(131, 36);
             this.radDineIN.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.radTakeOut.AutoSize = true;
             this.radTakeOut.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radTakeOut.Location = new System.Drawing.Point(337, 54);
-            this.radTakeOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radTakeOut.Margin = new System.Windows.Forms.Padding(4);
             this.radTakeOut.Name = "radTakeOut";
             this.radTakeOut.Size = new System.Drawing.Size(159, 36);
             this.radTakeOut.TabIndex = 1;
@@ -76,12 +76,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(154, 144);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 64);
+            this.button1.Size = new System.Drawing.Size(73, 64);
             this.button1.TabIndex = 2;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = false;
@@ -89,10 +89,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightBlue;
+            this.button2.BackColor = System.Drawing.Color.YellowGreen;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(338, 144);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 64);
             this.button2.TabIndex = 3;
@@ -102,12 +102,12 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.LightBlue;
+            this.button3.BackColor = System.Drawing.Color.YellowGreen;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(516, 144);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(530, 144);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 57);
+            this.button3.Size = new System.Drawing.Size(67, 57);
             this.button3.TabIndex = 4;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
@@ -115,12 +115,12 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.LightBlue;
+            this.button4.BackColor = System.Drawing.Color.YellowGreen;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(154, 292);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 60);
+            this.button4.Size = new System.Drawing.Size(73, 60);
             this.button4.TabIndex = 5;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
@@ -128,12 +128,12 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.LightBlue;
+            this.button5.BackColor = System.Drawing.Color.YellowGreen;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(515, 292);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(530, 292);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 59);
+            this.button5.Size = new System.Drawing.Size(67, 59);
             this.button5.TabIndex = 6;
             this.button5.Text = "6";
             this.button5.UseVisualStyleBackColor = false;
@@ -141,10 +141,10 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.LightBlue;
+            this.button6.BackColor = System.Drawing.Color.YellowGreen;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.Location = new System.Drawing.Point(339, 292);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(72, 60);
             this.button6.TabIndex = 7;
@@ -154,12 +154,12 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.LightBlue;
+            this.button7.BackColor = System.Drawing.Color.YellowGreen;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.Location = new System.Drawing.Point(154, 417);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(66, 60);
+            this.button7.Size = new System.Drawing.Size(73, 60);
             this.button7.TabIndex = 8;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
@@ -167,10 +167,10 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.LightBlue;
+            this.button8.BackColor = System.Drawing.Color.YellowGreen;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.Location = new System.Drawing.Point(338, 417);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(73, 63);
             this.button8.TabIndex = 9;
@@ -182,7 +182,7 @@
             // 
             this.btnMenu.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnMenu.Location = new System.Drawing.Point(154, 521);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(141, 59);
             this.btnMenu.TabIndex = 10;
@@ -193,10 +193,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 225);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(110, 225);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 28);
+            this.label1.Size = new System.Drawing.Size(77, 31);
             this.label1.TabIndex = 11;
             this.label1.Text = "Name";
             this.label1.Visible = false;
@@ -204,7 +205,7 @@
             // txtname
             // 
             this.txtname.Location = new System.Drawing.Point(285, 225);
-            this.txtname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtname.Margin = new System.Windows.Forms.Padding(4);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(252, 34);
             this.txtname.TabIndex = 12;
@@ -213,10 +214,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 361);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(110, 361);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 28);
+            this.label2.Size = new System.Drawing.Size(135, 31);
             this.label2.TabIndex = 13;
             this.label2.Text = "Contact No";
             this.label2.Visible = false;
@@ -224,7 +226,7 @@
             // txtno
             // 
             this.txtno.Location = new System.Drawing.Point(285, 360);
-            this.txtno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtno.Margin = new System.Windows.Forms.Padding(4);
             this.txtno.Name = "txtno";
             this.txtno.Size = new System.Drawing.Size(252, 34);
             this.txtno.TabIndex = 14;
@@ -234,7 +236,7 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.Coral;
             this.btnHome.Location = new System.Drawing.Point(378, 521);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(145, 59);
             this.btnHome.TabIndex = 15;
@@ -246,8 +248,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(757, 806);
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(841, 612);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.txtno);
             this.Controls.Add(this.label2);
@@ -265,7 +267,7 @@
             this.Controls.Add(this.radTakeOut);
             this.Controls.Add(this.radDineIN);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "orderOpetions";
             this.Text = "orderOpetions";
             this.ResumeLayout(false);
