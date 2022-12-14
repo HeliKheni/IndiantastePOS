@@ -86,7 +86,7 @@ namespace ResturantPOS
             uppE.txtNameU.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
             uppE.txtEmailU.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
             uppE.txtPhoneU.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            uppE.txtHoursU.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            uppE.txtHoursU.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
             
 
         }
