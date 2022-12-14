@@ -31,8 +31,8 @@ namespace ResturantPOS
         }
         public void Connect()
         {
-            //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
-            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
+           // constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
             //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
             conn = new SqlConnection(constr);
             conn.Open();
@@ -159,12 +159,19 @@ namespace ResturantPOS
                 cmd.Fill(dt);
                 dataGridView1.DataSource = dt;
                 }
+            else if (compareValue == "All")
+            {
+                SqlDataAdapter cmd = new SqlDataAdapter("select  emp_id, emp_name, email, phone, hours from Employee ", conn);
+                DataTable dt = new DataTable();
+                cmd.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-            EmployeeHomePage emp = new EmployeeHomePage();
+            ManagerHomePage emp = new ManagerHomePage();
             emp.Show();
         }
 

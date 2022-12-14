@@ -65,6 +65,7 @@ namespace ResturantPOS
                 MenuIDCheck();
 
             }
+            clearEverything();
 
         }
         public void MenuIDCheck()

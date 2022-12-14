@@ -74,7 +74,7 @@
             PriceU.AutoSize = true;
             PriceU.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             PriceU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            PriceU.Location = new System.Drawing.Point(60, 363);
+            PriceU.Location = new System.Drawing.Point(60, 359);
             PriceU.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             PriceU.Name = "PriceU";
             PriceU.Size = new System.Drawing.Size(57, 25);
@@ -113,7 +113,7 @@
             this.btnUpdateU.Location = new System.Drawing.Point(131, 505);
             this.btnUpdateU.Name = "btnUpdateU";
             this.btnUpdateU.Size = new System.Drawing.Size(116, 62);
-            this.btnUpdateU.TabIndex = 19;
+            this.btnUpdateU.TabIndex = 4;
             this.btnUpdateU.Text = "Update";
             this.btnUpdateU.UseVisualStyleBackColor = true;
             this.btnUpdateU.Click += new System.EventHandler(this.btnUpdateU_Click);
@@ -127,7 +127,7 @@
             this.ClearU.Location = new System.Drawing.Point(253, 505);
             this.ClearU.Name = "ClearU";
             this.ClearU.Size = new System.Drawing.Size(116, 62);
-            this.ClearU.TabIndex = 20;
+            this.ClearU.TabIndex = 5;
             this.ClearU.Text = "Clear";
             this.ClearU.UseVisualStyleBackColor = true;
             this.ClearU.Click += new System.EventHandler(this.ClearU_Click);
@@ -141,34 +141,34 @@
             this.CancelU.Location = new System.Drawing.Point(374, 505);
             this.CancelU.Name = "CancelU";
             this.CancelU.Size = new System.Drawing.Size(116, 62);
-            this.CancelU.TabIndex = 21;
+            this.CancelU.TabIndex = 6;
             this.CancelU.Text = "Cancel";
             this.CancelU.UseVisualStyleBackColor = true;
             this.CancelU.Click += new System.EventHandler(this.CancelU_Click);
             // 
             // txtNameU
             // 
-            this.txtNameU.Location = new System.Drawing.Point(253, 178);
+            this.txtNameU.Location = new System.Drawing.Point(253, 184);
             this.txtNameU.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNameU.Name = "txtNameU";
             this.txtNameU.Size = new System.Drawing.Size(141, 31);
-            this.txtNameU.TabIndex = 23;
+            this.txtNameU.TabIndex = 1;
             // 
             // txtCategoryU
             // 
-            this.txtCategoryU.Location = new System.Drawing.Point(253, 245);
+            this.txtCategoryU.Location = new System.Drawing.Point(253, 268);
             this.txtCategoryU.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCategoryU.Name = "txtCategoryU";
             this.txtCategoryU.Size = new System.Drawing.Size(141, 31);
-            this.txtCategoryU.TabIndex = 24;
+            this.txtCategoryU.TabIndex = 2;
             // 
             // txtPriceU
             // 
-            this.txtPriceU.Location = new System.Drawing.Point(253, 319);
+            this.txtPriceU.Location = new System.Drawing.Point(253, 359);
             this.txtPriceU.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPriceU.Name = "txtPriceU";
             this.txtPriceU.Size = new System.Drawing.Size(141, 31);
-            this.txtPriceU.TabIndex = 25;
+            this.txtPriceU.TabIndex = 3;
             // 
             // UppMenu
             // 

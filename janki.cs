@@ -124,7 +124,13 @@ namespace ResturantPOS
                 cmd.Fill(dt);
                 dataGridView1.DataSource = dt;
             }
-
+            else if (compareValue == "All")
+            {
+                SqlDataAdapter cmd = new SqlDataAdapter("select  item_id,item_name, Category, price from Menu", conn);
+                DataTable dt = new DataTable();
+                cmd.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -141,6 +147,13 @@ namespace ResturantPOS
             {
                 MessageBox.Show("Please select gridview to delete data.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ManagerHomePage emp = new ManagerHomePage();
+            emp.Show();
         }
     }
 }

@@ -134,7 +134,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(141, 31);
-            this.txtId.TabIndex = 12;
+            this.txtId.TabIndex = 1;
             // 
             // txtName
             // 
@@ -142,7 +142,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(141, 31);
-            this.txtName.TabIndex = 13;
+            this.txtName.TabIndex = 2;
             // 
             // txtEmail
             // 
@@ -150,7 +150,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(141, 31);
-            this.txtEmail.TabIndex = 14;
+            this.txtEmail.TabIndex = 3;
             // 
             // txtPhone
             // 
@@ -158,7 +158,7 @@
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(141, 31);
-            this.txtPhone.TabIndex = 15;
+            this.txtPhone.TabIndex = 4;
             // 
             // txtHours
             // 
@@ -166,7 +166,7 @@
             this.txtHours.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHours.Name = "txtHours";
             this.txtHours.Size = new System.Drawing.Size(141, 31);
-            this.txtHours.TabIndex = 16;
+            this.txtHours.TabIndex = 5;
             // 
             // btnAddEmp
             // 
@@ -177,7 +177,7 @@
             this.btnAddEmp.Location = new System.Drawing.Point(124, 525);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(116, 62);
-            this.btnAddEmp.TabIndex = 17;
+            this.btnAddEmp.TabIndex = 6;
             this.btnAddEmp.Text = "Add";
             this.btnAddEmp.UseVisualStyleBackColor = true;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
@@ -191,7 +191,7 @@
             this.button1.Location = new System.Drawing.Point(371, 525);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 62);
-            this.button1.TabIndex = 18;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -205,7 +205,7 @@
             this.button2.Location = new System.Drawing.Point(250, 525);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 62);
-            this.button2.TabIndex = 19;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

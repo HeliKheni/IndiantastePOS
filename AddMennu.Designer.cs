@@ -121,15 +121,15 @@
             this.txtCategoryM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCategoryM.Name = "txtCategoryM";
             this.txtCategoryM.Size = new System.Drawing.Size(141, 31);
-            this.txtCategoryM.TabIndex = 14;
+            this.txtCategoryM.TabIndex = 2;
             // 
             // txtNameM
             // 
-            this.txtNameM.Location = new System.Drawing.Point(308, 165);
+            this.txtNameM.Location = new System.Drawing.Point(299, 165);
             this.txtNameM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNameM.Name = "txtNameM";
             this.txtNameM.Size = new System.Drawing.Size(141, 31);
-            this.txtNameM.TabIndex = 15;
+            this.txtNameM.TabIndex = 1;
             // 
             // txtPriceM
             // 
@@ -137,7 +137,7 @@
             this.txtPriceM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPriceM.Name = "txtPriceM";
             this.txtPriceM.Size = new System.Drawing.Size(141, 31);
-            this.txtPriceM.TabIndex = 16;
+            this.txtPriceM.TabIndex = 3;
             // 
             // btnAddM
             // 
@@ -148,7 +148,7 @@
             this.btnAddM.Location = new System.Drawing.Point(140, 438);
             this.btnAddM.Name = "btnAddM";
             this.btnAddM.Size = new System.Drawing.Size(116, 62);
-            this.btnAddM.TabIndex = 18;
+            this.btnAddM.TabIndex = 4;
             this.btnAddM.Text = "Add";
             this.btnAddM.UseVisualStyleBackColor = true;
             this.btnAddM.Click += new System.EventHandler(this.btnAddM_Click);
@@ -162,7 +162,7 @@
             this.ClearM.Location = new System.Drawing.Point(262, 438);
             this.ClearM.Name = "ClearM";
             this.ClearM.Size = new System.Drawing.Size(116, 62);
-            this.ClearM.TabIndex = 19;
+            this.ClearM.TabIndex = 5;
             this.ClearM.Text = "Clear";
             this.ClearM.UseVisualStyleBackColor = true;
             this.ClearM.Click += new System.EventHandler(this.ClearM_Click);
@@ -173,10 +173,10 @@
             this.Cancel.FlatAppearance.BorderSize = 5;
             this.Cancel.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Cancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Cancel.Location = new System.Drawing.Point(398, 438);
+            this.Cancel.Location = new System.Drawing.Point(384, 438);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(116, 62);
-            this.Cancel.TabIndex = 20;
+            this.Cancel.TabIndex = 6;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);

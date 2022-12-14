@@ -103,7 +103,8 @@
             "Name",
             "Email",
             "Phone",
-            "Hours"});
+            "Hours",
+            "All"});
             this.Combosearch.Location = new System.Drawing.Point(579, 25);
             this.Combosearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Combosearch.Name = "Combosearch";
@@ -130,7 +131,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(824, 430);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
-          
             // 
             // button3
             // 
