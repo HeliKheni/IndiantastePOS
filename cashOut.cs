@@ -45,7 +45,7 @@ namespace ResturantPOS
             double amt = 0;
             if(drreader.Read())
             {
-                //amt = Convert.ToDouble(drreader.GetValue(0).ToString());
+                amt = Convert.ToDouble(drreader.GetValue(0).ToString());
                 return amt;
                /* if (Regex.Match(drreader.GetValue(0).ToString(), "^[0-9]*$").Success)
                 {
@@ -167,15 +167,16 @@ namespace ResturantPOS
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            managerHomePage.Show();
+            ManagerHomePage m = new ManagerHomePage();
+            m.Show();
         }
         SqlConnection conn;
         string constr;
         public void connect()
         {
-
+            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
             //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
-            constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
+            //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
 
             conn = new SqlConnection(constr);
             conn.Open();

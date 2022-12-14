@@ -37,7 +37,9 @@ namespace ResturantPOS
 
         private void btnOrderHistory_Click(object sender, EventArgs e)
         {
-
+            AllOrderHistory a=new AllOrderHistory();
+            this.Close();
+            a.Show();
         }
 
         private void btnChangeMenu_Click(object sender, EventArgs e)

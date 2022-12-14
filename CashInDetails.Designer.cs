@@ -45,7 +45,7 @@
             this.label1.Location = new System.Drawing.Point(173, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 38);
+            this.label1.Size = new System.Drawing.Size(281, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "CashIn Details";
             // 
@@ -121,6 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(680, 441);
             this.Controls.Add(this.txtCash);
             this.Controls.Add(this.txtDate);

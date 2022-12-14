@@ -45,8 +45,8 @@ namespace ResturantPOS
         }
         public void Connect()
         {
-            constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
-            //constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+            //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
             conn = new SqlConnection(constr);
             conn.Open();
             Console.WriteLine("Connection open");
@@ -256,7 +256,7 @@ namespace ResturantPOS
                 cmd4.Parameters.AddWithValue("itemId", it);
                 cmd4.Parameters.AddWithValue("orderId", orderid);
                 cmd4.ExecuteNonQuery();
-                MessageBox.Show("Order data added Sucessfully");
+              
                 conn.Close();
             }
            

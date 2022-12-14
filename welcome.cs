@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace ResturantPOS
 {
@@ -16,24 +17,43 @@ namespace ResturantPOS
         public Form1 cashIn;
         public Menu menu;
         public Employee form2;
-        public AdminHomePage adminHomePage;
+       
         public ManagerHomePage managerHomePage;
         public string pass = "";
         public welcome()
         {
             InitializeComponent();
+
             cashOut = new cashOut();
             cashIn = new Form1();
            
             form2= new Employee();
             form2= new Employee();
-            adminHomePage = new AdminHomePage();
+          
            managerHomePage = new ManagerHomePage(this);
             pass = "";
 
+            this.BackgroundImage = Properties.Resources.img4;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            
+            var timer = new Timer();
+            //change the background image every second  
+            timer.Interval = 2500;
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Start();
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            //add image in list from resource file.  
+            List<Bitmap> lisimage = new List<Bitmap>();
+            lisimage.Add(Properties.Resources.img4);
+            lisimage.Add(Properties.Resources.img5);
+            lisimage.Add(Properties.Resources.img6);
+            lisimage.Add(Properties.Resources.img7);
+            var indexbackimage = DateTime.Now.Second % lisimage.Count;
+            this.BackgroundImage = lisimage[indexbackimage];
         }
 
-      
 
         private void btnCash_Click(object sender, EventArgs e)
         {
@@ -123,25 +143,19 @@ namespace ResturantPOS
         {
            
             
-           if (!radAdmin.Checked && !radManager.Checked && !radEmployee.Checked)
+           if (!radManager.Checked && !radEmployee.Checked)
             {
                 MessageBox.Show("Please Select Any Option. You are login As ?");
             }
-            else if (radAdmin.Checked && pass == "1234")
-            {
-                MessageBox.Show(pass + " Admin Password Match");
-                this.Hide();
-                form2.Show();
-            }
             else if (radManager.Checked && pass == "2345")
             {
-                MessageBox.Show(pass + " Manager Password Match");
+                //MessageBox.Show(pass + " Manager Password Match");
                 this.Hide();
                 managerHomePage.Show();
             }
             else if (radEmployee.Checked && pass == "3456")
             {
-               MessageBox.Show(pass + " Employee Password Match");
+              // MessageBox.Show("Welcome as Employee");
                 EmployeeHomePage emphome=new EmployeeHomePage();
                 emphome.Show();
                 this.Hide();
@@ -152,6 +166,7 @@ namespace ResturantPOS
                 MessageBox.Show("Password doesn't Match");
             }
             txtNumInput.Text = "";
+            pass = "";
         }
     }
 }
