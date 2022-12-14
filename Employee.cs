@@ -52,6 +52,7 @@ namespace ResturantPOS
             DataTable dt = new DataTable();
             cmd.Fill(dt);
             dataGridView1.DataSource = dt;
+          
 
 
         }
@@ -60,11 +61,22 @@ namespace ResturantPOS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            uppE.Show();
+            if (EmpId == 0)
+            {
+                MessageBox.Show("please select gridView to update data.");
+
+            }
+            else
+            {
+               
+                uppE.Show();
+
+            }
         }
 
         private void cellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
 
             int index = e.RowIndex;
             DataGridViewRow selectedRow = new DataGridViewRow();
@@ -75,6 +87,7 @@ namespace ResturantPOS
             uppE.txtEmailU.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
             uppE.txtPhoneU.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
             uppE.txtHoursU.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            
 
         }
 
@@ -88,15 +101,20 @@ namespace ResturantPOS
                 dataBind();
 
             }
+            else
+            {
+                MessageBox.Show("Please select gridview to delete data.");
+            }
             
         }
         public void dataBind()
         {
-        
+            Connect();
             SqlDataAdapter sap = new SqlDataAdapter("select emp_id, emp_name, email, phone, hours from Employee", conn);
             DataTable dt = new DataTable();
             sap.Fill(dt);
             dataGridView1.DataSource = dt;
+            
         }
 
      
@@ -143,7 +161,14 @@ namespace ResturantPOS
                 }
         }
 
-          
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            EmployeeHomePage emp = new EmployeeHomePage();
+            emp.Show();
         }
+
+       
+    }
     }
 

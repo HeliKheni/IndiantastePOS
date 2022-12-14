@@ -124,5 +124,14 @@ namespace ResturantPOS
             this.Close();
             emp.Show();
         }
+
+        private void btnChangeMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            //ChangeForm c = new ChangeForm();
+            //c.Show();
+            janki j = new janki();
+            j.Show();
+        }
     }
 }

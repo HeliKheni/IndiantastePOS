@@ -85,6 +85,7 @@ namespace ResturantPOS
                 this.Close();
                 employee.dataBind();
                 clearEverything();
+              
             }
 
         }
