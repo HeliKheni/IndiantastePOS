@@ -45,7 +45,7 @@ namespace ResturantPOS
             double amt = 0;
             if(drreader.Read())
             {
-                amt = Convert.ToDouble(drreader.GetValue(0).ToString());
+                //amt = Convert.ToDouble(drreader.GetValue(0).ToString());
                 return amt;
                /* if (Regex.Match(drreader.GetValue(0).ToString(), "^[0-9]*$").Success)
                 {
