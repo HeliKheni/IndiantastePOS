@@ -31,29 +31,44 @@ namespace ResturantPOS
             txtCredit.Text = displaySum("Credit").ToString();
 
         }
-        public double displaySum(String type)
+        public double displaySum(string type)
         {
             connect();
             SqlCommand cmd;
             SqlDataReader drreader;
-            String sql, output = "";
+            String sql;
             DateTime now = DateTime.Now;
-            sql = "select sum(TotalAmt) from orders where AddedAt='" + now.ToShortDateString() + "'" +
-                " and paidBy='"+type+"'";
+
+            sql = "SELECT SUM(TotalAmt) FROM orders WHERE AddedAt = @AddedAt AND paidBy = @Type";
             cmd = new SqlCommand(sql, conn);
-            drreader = cmd.ExecuteReader();
-            double amt = 0;
-            if(drreader.Read())
+            cmd.Parameters.AddWithValue("@AddedAt", now.ToShortDateString());
+            cmd.Parameters.AddWithValue("@Type", type);
+
+            try
             {
-                amt = Convert.ToDouble(drreader.GetValue(0).ToString());
-                return amt;
-               
+                conn.Open();
+                drreader = cmd.ExecuteReader();
+
+                if (drreader.Read())
+                {
+                    double amt = Convert.ToDouble(drreader.GetValue(0).ToString());
+                    return amt;
+                }
+
+                return 0; // If no records are found, return 0.
             }
-            return amt;
-            
-            conn.Close();
-            
+            catch (Exception ex)
+            {
+                // Handle the exception (e.g., log it or throw a custom exception)
+                Console.WriteLine("Error: " + ex.Message);
+                return 0;
+            }
+            finally
+            {
+                conn.Close(); // Make sure to close the connection in the finally block.
+            }
         }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -170,9 +185,9 @@ namespace ResturantPOS
         string constr;
         public void connect()
         {
-            constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
+            //constr = @"data source=KHENI;database=DbIndianTaste;integrated security=true";
             //constr = @"data source=DESKTOP-7N3FNPL\SQL;database=DbIndianTaste;integrated security=true";
-            //constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
+            constr = @"data source=JANKI\MSSQLSERVER04;database=DbIndianTaste;integrated security=true";
 
             conn = new SqlConnection(constr);
             conn.Open();
